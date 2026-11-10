@@ -1,0 +1,2522 @@
+<!DOCTYPE html>
+<html lang="vi" data-view="sketch">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HỆ THỐNG ĐÀO TẠO & THỰC HÀNH TƯƠNG TÁC: LÀM CHỦ KỸ NĂNG AI (SKILLS) TỪ A-Z</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ==========================================================================
+       1. HỆ THỐNG 5 GIAO DIỆN ĐA SẮC MÀU (MULTI-THEME LUXURY PALETTES)
+       ========================================================================== */
+    :root,
+    html[data-view="sketch"] {
+      --bg-main: #fdfbf7;
+      --bg-secondary: #f1f5f9;
+      --bg-glass: rgba(255, 255, 255, 0.92);
+      --card-bg: #ffffff;
+      --card-hover: #f8fafc;
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --primary: #dc2626;       /* Đỏ Chu Sa */
+      --primary-soft: #fef2f2;
+      --secondary: #4f46e5;     /* Tím Indigo */
+      --secondary-soft: #eef2ff;
+      --emerald: #059669;       /* Xanh Ngọc Lục Bảo */
+      --emerald-soft: #ecfdf5;
+      --amber: #d97706;         /* Vàng Hoàng Gia */
+      --amber-soft: #fffbeb;
+      --cyan: #0891b2;          /* Xanh Lam Ngọc */
+      --cyan-soft: #ecfeff;
+      --violet: #7c3aed;        /* Tím Sáng Tạo */
+      --violet-soft: #f5f3ff;
+      --border-color: #e2e8f0;
+      --shadow-main: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+      --shadow-glow: 0 12px 32px -4px rgba(220, 38, 38, 0.18);
+      --grad-hero: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #4f46e5 100%);
+      --grad-banner: linear-gradient(135deg, #fff1f2 0%, #eef2ff 50%, #ecfdf5 100%);
+    }
+
+    html[data-view="realistic"] {
+      --bg-main: #f0fdf4;
+      --bg-secondary: #dcfce7;
+      --bg-glass: rgba(255, 255, 255, 0.92);
+      --card-bg: #ffffff;
+      --card-hover: #f0fdf4;
+      --text-main: #064e3b;
+      --text-sub: #065f46;
+      --text-muted: #047857;
+      --primary: #059669;
+      --primary-soft: #d1fae5;
+      --secondary: #0d9488;
+      --secondary-soft: #ccfbf1;
+      --emerald: #16a34a;
+      --emerald-soft: #dcfce7;
+      --amber: #d97706;
+      --amber-soft: #fef3c7;
+      --cyan: #0284c7;
+      --cyan-soft: #e0f2fe;
+      --violet: #7c3aed;
+      --violet-soft: #ede9fe;
+      --border-color: #a7f3d0;
+      --shadow-main: 0 10px 30px -5px rgba(6, 78, 59, 0.1);
+      --shadow-glow: 0 12px 32px -4px rgba(5, 150, 105, 0.22);
+      --grad-hero: linear-gradient(135deg, #059669 0%, #0d9488 50%, #0284c7 100%);
+      --grad-banner: linear-gradient(135deg, #ecfdf5 0%, #e0f2fe 50%, #fefce8 100%);
+    }
+
+    html[data-view="anime"] {
+      --bg-main: #fff5f7;
+      --bg-secondary: #fce7f3;
+      --bg-glass: rgba(255, 255, 255, 0.92);
+      --card-bg: #ffffff;
+      --card-hover: #fdf2f8;
+      --text-main: #1e1b4b;
+      --text-sub: #312e81;
+      --text-muted: #6366f1;
+      --primary: #e11d48;
+      --primary-soft: #ffe4e6;
+      --secondary: #7c3aed;
+      --secondary-soft: #ede9fe;
+      --emerald: #059669;
+      --emerald-soft: #d1fae5;
+      --amber: #ea580c;
+      --amber-soft: #ffedd5;
+      --cyan: #0284c7;
+      --cyan-soft: #e0f2fe;
+      --violet: #c026d3;
+      --violet-soft: #fae8ff;
+      --border-color: #fbcfe8;
+      --shadow-main: 0 10px 30px -5px rgba(225, 29, 72, 0.1);
+      --shadow-glow: 0 12px 32px -4px rgba(124, 58, 237, 0.2);
+      --grad-hero: linear-gradient(135deg, #e11d48 0%, #9333ea 50%, #0284c7 100%);
+      --grad-banner: linear-gradient(135deg, #fff1f2 0%, #f3e8ff 50%, #e0f2fe 100%);
+    }
+
+    html[data-view="cinematic"] {
+      --bg-main: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-glass: rgba(30, 41, 59, 0.92);
+      --card-bg: #1e293b;
+      --card-hover: #334155;
+      --text-main: #f8fafc;
+      --text-sub: #e2e8f0;
+      --text-muted: #94a3b8;
+      --primary: #fbbf24;
+      --primary-soft: rgba(251, 191, 36, 0.15);
+      --secondary: #38bdf8;
+      --secondary-soft: rgba(56, 189, 248, 0.15);
+      --emerald: #34d399;
+      --emerald-soft: rgba(52, 211, 153, 0.15);
+      --amber: #fb923c;
+      --amber-soft: rgba(251, 146, 60, 0.15);
+      --cyan: #22d3ee;
+      --cyan-soft: rgba(34, 211, 238, 0.15);
+      --violet: #c084fc;
+      --violet-soft: rgba(192, 132, 252, 0.15);
+      --border-color: #334155;
+      --shadow-main: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 12px 32px -4px rgba(251, 191, 36, 0.25);
+      --grad-hero: linear-gradient(135deg, #f59e0b 0%, #ec4899 50%, #38bdf8 100%);
+      --grad-banner: linear-gradient(135deg, #1e293b 0%, #1e1b4b 50%, #0f172a 100%);
+    }
+
+    html[data-view="handwritten"] {
+      --bg-main: #f7f3e8;
+      --bg-secondary: #ede6d3;
+      --bg-glass: rgba(247, 243, 232, 0.94);
+      --card-bg: #fffdf9;
+      --card-hover: #f5eedc;
+      --text-main: #1c1917;
+      --text-sub: #44403c;
+      --text-muted: #78716c;
+      --primary: #991b1b;
+      --primary-soft: #fef2f2;
+      --secondary: #92400e;
+      --secondary-soft: #fef3c7;
+      --emerald: #166534;
+      --emerald-soft: #dcfce7;
+      --amber: #b45309;
+      --amber-soft: #ffedd5;
+      --cyan: #1e40af;
+      --cyan-soft: #dbeafe;
+      --violet: #6b21a8;
+      --violet-soft: #f3e8ff;
+      --border-color: #d6cbb5;
+      --shadow-main: 0 10px 30px -5px rgba(28, 25, 23, 0.08);
+      --shadow-glow: 0 12px 32px -4px rgba(153, 27, 27, 0.18);
+      --grad-hero: linear-gradient(135deg, #991b1b 0%, #b45309 50%, #1e40af 100%);
+      --grad-banner: linear-gradient(135deg, #fef2f2 0%, #fef3c7 50%, #eff6ff 100%);
+    }
+
+    /* BIẾN CỠ CHỮ & PHÔNG CHỮ CHO MỌI LỨA TUỔI */
+    :root {
+      --font-scale: 1.05;
+      --font-primary: 'Be Vietnam Pro', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-primary);
+      font-size: calc(16px * var(--font-scale));
+      line-height: 1.55;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    /* ==========================================================================
+       2. BỐ CỤC TOÀN MÀN HÌNH 16:9 (ZERO BLACK BARS - FULL DASHBOARD)
+       ========================================================================== */
+    .app-shell {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 68px 1fr 58px;
+      background: var(--bg-main);
+    }
+
+    /* THANH ĐIỀU KHIỂN TRÊN CÙNG (TOP HEADER) */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      border-bottom: 2px solid var(--border-color);
+      z-index: 100;
+      gap: 12px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-badge {
+      background: var(--grad-hero);
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 0.9rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .top-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+
+    .ctrl-btn, .ctrl-select {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 2px solid var(--border-color);
+      padding: 7px 13px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .ctrl-btn:hover, .ctrl-select:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-main);
+    }
+
+    .ctrl-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .ctrl-btn.btn-voice {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .ctrl-btn.btn-voice.speaking {
+      background: var(--emerald);
+      border-color: var(--emerald);
+      animation: pulseGlow 1.5s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.5); }
+      50% { box-shadow: 0 0 0 10px rgba(5, 150, 105, 0); }
+    }
+
+    /* KHU VỰC LÀM VIỆC CHÍNH: SIDEBAR TRÁI + KHÔNG GIAN TRẠM 16:9 */
+    .workspace-body {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* THANH BẢN ĐỒ 8 TRẠM BÊN TRÁI */
+    .station-rail {
+      background: var(--card-bg);
+      border-right: 2px solid var(--border-color);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+    }
+
+    .rail-header {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      padding: 4px 10px 8px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .rail-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      background: transparent;
+      color: var(--text-sub);
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .rail-item:hover {
+      background: var(--bg-secondary);
+      color: var(--text-main);
+    }
+
+    .rail-item.active {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-color: var(--primary);
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+    }
+
+    .rail-num {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 8px;
+      background: var(--bg-secondary);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.85rem;
+    }
+
+    .rail-item.active .rail-num {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* VÙNG TRÌNH CHIẾU & TƯƠNG TÁC CHÍNH */
+    .stage-viewport {
+      height: 100%;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      padding: 24px 32px;
+      background: var(--bg-main);
+    }
+
+    .station-panel {
+      display: none;
+      max-width: 1600px;
+      margin: 0 auto;
+      animation: fadeSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .station-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* TIÊU ĐỀ TRẠM ĐA SẮC - CHỮ CỰC LỚN DỄ ĐỌC */
+    .station-header {
+      background: var(--grad-banner);
+      border: 2px solid var(--border-color);
+      border-radius: 20px;
+      padding: 20px 28px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: var(--shadow-main);
+    }
+
+    .station-kicker {
+      display: inline-block;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .station-title {
+      font-size: 1.95rem;
+      font-weight: 900;
+      line-height: 1.2;
+      background: var(--grad-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    html[data-view="cinematic"] .station-title {
+      background: linear-gradient(90deg, #fbbf24, #38bdf8, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .station-subtitle {
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--text-sub);
+    }
+
+    /* HỆ THỐNG LƯỚI & THẺ (CARDS) */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .lux-card {
+      background: var(--card-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow-main);
+      transition: all 0.25s ease;
+    }
+
+    .lux-card:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .badge-red { background: var(--primary-soft); color: var(--primary); }
+    .badge-indigo { background: var(--secondary-soft); color: var(--secondary); }
+    .badge-emerald { background: var(--emerald-soft); color: var(--emerald); }
+    .badge-amber { background: var(--amber-soft); color: var(--amber); }
+    .badge-cyan { background: var(--cyan-soft); color: var(--cyan); }
+    .badge-violet { background: var(--violet-soft); color: var(--violet); }
+
+    .card-title {
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .key-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .key-list li {
+      font-size: 1.06rem;
+      font-weight: 500;
+      color: var(--text-sub);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .key-list li strong {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    /* THẺ LẬT 3D (3D FLIP CARDS TRẠM 1) */
+    .flip-card {
+      perspective: 1200px;
+      height: 230px;
+      cursor: pointer;
+    }
+
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-inner,
+    .flip-card.flipped .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front, .flip-back {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: 18px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid var(--border-color);
+      box-shadow: var(--shadow-main);
+    }
+
+    .flip-front {
+      background: var(--card-bg);
+    }
+
+    .flip-back {
+      background: var(--grad-hero);
+      color: #ffffff;
+      transform: rotateY(180deg);
+    }
+
+    /* KHUNG HÌNH ẢNH TÙY BIẾN (LOCAL IMAGE UPLOAD) */
+    .img-showcase {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      background: var(--bg-secondary);
+      min-height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img-showcase img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-upload-btn {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
+    }
+
+    .img-upload-btn:hover {
+      background: var(--primary);
+      transform: scale(1.04);
+    }
+
+    /* NÚT TAB TƯƠNG TÁC */
+    .interactive-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .itab-btn {
+      flex: 1;
+      min-width: 180px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 2px solid var(--border-color);
+      background: var(--card-bg);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 1.02rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .itab-btn:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .itab-btn.active {
+      background: var(--grad-hero);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* BẢNG SO SÁNH RÕ RÀNG */
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+    }
+
+    .edu-table th {
+      background: var(--secondary);
+      color: #ffffff;
+      padding: 13px 16px;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .edu-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--card-bg);
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-sub);
+    }
+
+    /* TRẠM 4: BÁNH XE CUỘC ĐỜI & TRI THỨC AI */
+    .wheel-slider-row {
+      margin-bottom: 12px;
+      background: var(--bg-secondary);
+      padding: 10px 14px;
+      border-radius: 12px;
+    }
+
+    .wheel-slider-row label {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 800;
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .wheel-slider-row input[type="range"] {
+      width: 100%;
+      height: 10px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* TRẠM 6: BÀN LÀM VIỆC GIẢ LẬP GEMINI */
+    .sim-input, .sim-textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 12px;
+      border: 2px solid var(--border-color);
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 1.02rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .sim-input:focus, .sim-textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 4px var(--secondary-soft);
+    }
+
+    .sim-feedback {
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-top: 6px;
+      min-height: 24px;
+    }
+
+    /* FOOTER ĐIỀU HƯỚNG DƯỚI CÙNG */
+    .bottom-dock {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      background: var(--bg-glass);
+      border-top: 2px solid var(--border-color);
+      z-index: 100;
+    }
+
+    .dock-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .dock-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 2px solid var(--border-color);
+      background: var(--card-bg);
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .dock-dot.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      transform: scale(1.1);
+    }
+
+    /* TOAST THÔNG BÁO (THAY THẾ HOÀN TOÀN ALERT) */
+    #toast-banner {
+      position: fixed;
+      top: 82px;
+      right: 28px;
+      background: var(--text-main);
+      color: var(--card-bg);
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(-15px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    #toast-banner.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MODAL CẤU HÌNH */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--card-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 22px;
+      padding: 28px;
+      width: 92%;
+      max-width: 580px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    }
+
+    /* CONFETTI CANVAS */
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5000;
+    }
+
+    @media (max-width: 1100px) {
+      .workspace-body { grid-template-columns: 1fr; }
+      .station-rail { display: none; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CANVAS PHÁO HOA CHÚC MỪNG -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- THÔNG BÁO TOAST THÔNG MINH -->
+  <div id="toast-banner">✨ Hệ thống đã sẵn sàng!</div>
+
+  <div class="app-shell">
+    <!-- ==================== TOP CONTROL BAR ==================== -->
+    <header class="top-bar">
+      <div class="brand-group">
+        <span class="brand-badge">CHỦ NHÂN MAI HƯỜNG</span>
+        <h1 class="brand-title">LÀM CHỦ KỸ NĂNG AI (SKILLS) TỪ A–Z</h1>
+      </div>
+
+      <div class="top-controls">
+        <!-- Đổi 5 Giao diện màu sắc -->
+        <select class="ctrl-select" id="theme-selector" onchange="window.switchTheme(this.value)" title="Chọn bảng màu giao diện">
+          <option value="sketch">🎨 1. Sáng Rõ Đa Sắc (Mặc định)</option>
+          <option value="realistic">🌿 2. Bình Yên Xanh (Ngọc Lục Bảo)</option>
+          <option value="anime">🌸 3. Đa Sắc Tươi Sáng (Pastel)</option>
+          <option value="cinematic">👑 4. Điện Ảnh Hoàng Gia (Sapphire)</option>
+          <option value="handwritten">📜 5. Thư Pháp Trầm Mặc (Giấy Dó)</option>
+        </select>
+
+        <!-- Đổi Phông chữ -->
+        <select class="ctrl-select" id="font-selector" onchange="window.switchFontFamily(this.value)" title="Chọn kiểu chữ">
+          <option value="'Be Vietnam Pro', sans-serif">🔤 Chữ Hiện Đại</option>
+          <option value="'Playfair Display', serif">📖 Chữ Sách Báo</option>
+          <option value="'Dancing Script', cursive">✍️ Chữ Nghệ Thuật</option>
+        </select>
+
+        <!-- Nút phóng to chữ cho người lớn tuổi -->
+        <button class="ctrl-btn" onclick="window.scaleFontSize(-0.08)" title="Thu nhỏ chữ">A-</button>
+        <button class="ctrl-btn" onclick="window.scaleFontSize(0.08)" title="Phóng to chữ">A+</button>
+        <button class="ctrl-btn" onclick="window.scaleFontSize(0.16)" title="Chữ siêu to rõ">A++</button>
+
+        <!-- Giọng đọc Tiếng Việt chuẩn -->
+        <button class="ctrl-btn btn-voice" id="btn-tts" onclick="window.toggleVietnameseVoice()">
+          🔊 <span id="tts-label">Đọc Bài Giảng</span>
+        </button>
+
+        <!-- Nhạc nền tần số 528Hz -->
+        <button class="ctrl-btn" id="btn-528" onclick="window.toggleHealingAudio()">
+          🎵 528Hz
+        </button>
+
+        <!-- Mở Modal cấu hình Link -->
+        <button class="ctrl-btn" onclick="window.openConfigModal()">⚙️ Link</button>
+
+        <!-- Xuất file HTML độc lập -->
+        <button class="ctrl-btn" style="background:var(--secondary);color:#fff;border-color:var(--secondary);" onclick="window.exportStandaloneHTML()">
+          💾 Tải HTML
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================== MAIN WORKSPACE (16:9 FULL SCREEN) ==================== -->
+    <div class="workspace-body">
+      <!-- CỘT TRÁI: BẢN ĐỒ 8 TRẠM ĐÀO TẠO -->
+      <aside class="station-rail">
+        <div class="rail-header">BẢN ĐỒ 8 TRẠM THỰC HÀNH</div>
+        <button class="rail-item active" onclick="window.goToStation(0)">
+          <span class="rail-num">1</span>
+          <span>Bản Chất Kỹ Năng & Khi Nào Cần Tạo?</span>
+        </button>
+        <button class="rail-item" onclick="window.goToStation(1)">
+          <span class="rail-num">2</span>
+          <span>3 Con Đường Tạo Kỹ Năng Trên Gemini</span>
+        </button>
+        <button class="rail-item" onclick="window.goToStation(2)">
+          <span class="rail-num">3</span>
+          <span>Chọn Mô Hình & Mức Độ Tư Duy AI</span>
+        </button>
+        <button class="rail-item" onclick="window.goToStation(3)">
+          <span class="rail-num">4</span>
+          <span>Mô Phỏng Bánh Xe Cuộc Đời & AI</span>
+        </button>
+        <button class="rail-item" onclick="window.goToStation(4)">
+          <span class="rail-num">5</span>
+          <span>Cầm Tay Chỉ Việc: 4 Bước Vàng</span>
+        </button>
+        <button class="rail-item" onclick="window.goToStation(5)">
+          <span class="rail-num">6</span>
+          <span>Bàn Giả Lập Gemini & Xuất SKILL.md</span>
+        </button>
+        <button class="rail-item" onclick="window.goToStation(6)">
+          <span class="rail-num">7</span>
+          <span>Trạm Bình Yên Xanh & Video Bài Giảng</span>
+        </button>
+        <button class="rail-item" onclick="window.goToStation(7)">
+          <span class="rail-num">8</span>
+          <span>Đấu Trường Quiz & Ký Tên Cam Kết</span>
+        </button>
+      </aside>
+
+      <!-- KHU VỰC NỘI DUNG TƯƠNG TÁC CHÍNH -->
+      <main class="stage-viewport" id="stage-viewport">
+
+        <!-- =================================================================
+             TRẠM 1: BẢN CHẤT KỸ NĂNG AI (TỪ GEM ĐẾN SKILL) & KHI NÀO CẦN TẠO?
+             ================================================================= -->
+        <section class="station-panel active" id="station-0" data-speech="Trạm một: Bản chất Kỹ năng A I và khi nào cần tạo. Trước đây gọi là Gem, nay nâng cấp thành Kỹ năng hay Skill. Bản chất là đóng gói toàn bộ kinh nghiệm, quy tắc và biểu mẫu của bạn vào một trợ lý chuyên biệt. Hãy bấm vào các thẻ lật ba đê và bảng phân loại để khám phá khi nào cần tạo và khi nào không cần tạo kỹ năng.">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 1 / 8 • NỀN TẢNG TƯ DUY CỐT LÕI</span>
+              <h2 class="station-title">KỸ NĂNG AI (SKILL) LÀ GÌ? TẠI SAO & KHI NÀO CẦN TẠO?</h2>
+              <p class="station-subtitle">Chuyển mình từ "Gem" sang "Kỹ năng (Skill)": Đóng gói tri thức 1 lần, tự động hóa chuẩn xác trọn đời.</p>
+            </div>
+            <button class="ctrl-btn" style="background:var(--amber);color:#fff;border:none;padding:12px 18px;" onclick="window.bloomLotus528()">
+              🌸 Khai Mở Năng Lượng Học Tập
+            </button>
+          </div>
+
+          <!-- 3 THẺ LẬT 3D: SO SÁNH CÁCH CŨ VS CÁCH MỚI -->
+          <div style="margin-bottom: 10px; font-weight: 800; color: var(--primary); font-size: 1.05rem;">
+            👆 Chạm hoặc di chuột vào 3 tấm thẻ dưới đây để lật xem sự khác biệt giữa Làm Thủ Công và Dùng Kỹ Năng (Skill):
+          </div>
+          <div class="grid-3" style="margin-bottom: 22px;">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <span class="card-badge badge-red">❌ CÁCH CŨ (THỦ CÔNG)</span>
+                  <h3 class="card-title">⏳ Mồi Lệnh Lặp Đi Lặp Lại</h3>
+                  <p style="color:var(--text-sub);font-weight:600;">Mỗi lần mở máy lại phải gõ dài dòng: "Tôi là giáo viên, hãy viết theo mẫu này, đừng dùng từ kia..." rất tốn thời gian.</p>
+                </div>
+                <div class="flip-back">
+                  <span class="card-badge" style="background:rgba(255,255,255,0.2);color:#fff;">✅ CÁCH MỚI (DÙNG SKILL)</span>
+                  <h3 class="card-title" style="color:#fff;">🚀 Thiết Lập 1 Lần, Dùng Mãi Mãi</h3>
+                  <p style="font-weight:600;">Kỹ năng lưu giữ vĩnh viễn mọi quy tắc. Mở máy lên chỉ cần gõ yêu cầu ngắn gọn là AI tự động hiểu và thực thi ngay!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <span class="card-badge badge-amber">❌ CÁCH CŨ (THỦ CÔNG)</span>
+                  <h3 class="card-title">📉 Kết Quả Lúc Đúng Lúc Sai</h3>
+                  <p style="color:var(--text-sub);font-weight:600;">Hôm nay AI xuất bảng đẹp, ngày mai lại viết văn xuôi lan man, sai cột Excel hoặc lỗi cấu trúc code HTML/JSON.</p>
+                </div>
+                <div class="flip-back">
+                  <span class="card-badge" style="background:rgba(255,255,255,0.2);color:#fff;">✅ CÁCH MỚI (DÙNG SKILL)</span>
+                  <h3 class="card-title" style="color:#fff;">🎯 Chuẩn Xác Đồng Nhất 100%</h3>
+                  <p style="font-weight:600;">Đóng khung định dạng đầu ra khắt khe: Đúng từng cột bảng kế toán, đúng chuẩn kịch bản Reels 9:16 và mã HTML.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-inner">
+                <div class="flip-front">
+                  <span class="card-badge badge-indigo">❌ CÁCH CŨ (THỦ CÔNG)</span>
+                  <h3 class="card-title">🔒 Khó Chuyển Giao Kinh Nghiệm</h3>
+                  <p style="color:var(--text-sub);font-weight:600;">Bí quyết làm việc nằm rải rác trong các đoạn chat cũ, đồng nghiệp hay học sinh không biết cách làm theo.</p>
+                </div>
+                <div class="flip-back">
+                  <span class="card-badge" style="background:rgba(255,255,255,0.2);color:#fff;">✅ CÁCH MỚI (DÙNG SKILL)</span>
+                  <h3 class="card-title" style="color:#fff;">💎 Đóng Gói Thành Tài Sản Số</h3>
+                  <p style="font-weight:600;">Xuất thành file SKILL.md để lưu trữ trên ổ cứng hoặc chia sẻ cho học viên, đồng nghiệp sử dụng chuẩn như chuyên gia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BẢNG PHÂN LOẠI TƯƠNG TÁC: KHI NÀO CẦN TẠO VS KHÔNG CẦN TẠO + KHUNG ẢNH -->
+          <div class="grid-2">
+            <div class="lux-card">
+              <div class="interactive-tabs" style="margin-bottom:14px;">
+                <button class="itab-btn active" id="btn-when-yes" onclick="window.switchWhenTab('yes')">✅ KHI NÀO CẦN TẠO?</button>
+                <button class="itab-btn" id="btn-when-no" onclick="window.switchWhenTab('no')">🚫 KHI NÀO KHÔNG CẦN?</button>
+              </div>
+
+              <div id="panel-when-yes">
+                <ul class="key-list">
+                  <li><span>🟢</span><div><strong>1. Công việc lặp đi lặp lại thường xuyên:</strong> Soạn giáo án theo mẫu trường, viết kịch bản video Reels hàng ngày, tạo nhạc Suno, tổng hợp báo cáo lớp chủ nhiệm.</div></li>
+                  <li><span>🟢</span><div><strong>2. Quy tắc đầu ra khắt khe:</strong> Bắt buộc ngày tháng chuẩn <code>DD/MM/YYYY</code>, bảng biểu đúng số cột, hoặc mã JSON/HTML chạy được ngay không lỗi.</div></li>
+                  <li><span>🟢</span><div><strong>3. Quy trình nhiều bước (Multi-step):</strong> Đòi hỏi AI phải phân tích dữ liệu → lập dàn ý → viết chi tiết → tự kiểm tra lỗi định dạng trước khi trả kết quả.</div></li>
+                </ul>
+              </div>
+
+              <div id="panel-when-no" style="display:none;">
+                <ul class="key-list">
+                  <li><span>🔴</span><div><strong>1. Tác vụ ngẫu nhiên chỉ dùng 1 lần:</strong> Viết một bức thư cảm ơn đột xuất, dịch nhanh một câu tiếng Anh, hỏi thăm thông tin thời tiết.</div></li>
+                  <li><span>🔴</span><div><strong>2. Việc phổ thông AI đã làm tốt sẵn:</strong> Đặt câu hỏi tìm hiểu kiến thức chung, tóm tắt nhanh một bài báo ngắn, tính nhẩm đơn giản.</div></li>
+                  <li><span>🔴</span><div><strong>3. Quy trình còn đang thử nghiệm, chưa chốt mẫu:</strong> Khi chính bạn chưa quyết định được đầu ra cuối cùng trông như thế nào.</div></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lux-card" style="display:flex;flex-direction:column;gap:14px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="card-badge badge-emerald">🖼️ TRỰC QUAN HÓA & TÙY BIẾN HÌNH ẢNH</span>
+                <span id="lotus-status" style="font-size:0.88rem;font-weight:700;color:var(--emerald);">Tần số: Sẵn sàng</span>
+              </div>
+              <div class="img-showcase">
+                <img id="img-station-1" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&auto=format&fit=crop&q=80" alt="Làm chủ Kỹ năng AI">
+                <label class="img-upload-btn">
+                  📷 Thay ảnh của bạn
+                  <input type="file" accept="image/*" style="display:none;" onchange="window.uploadStationImage(event, 'img-station-1')">
+                </label>
+              </div>
+              <p style="font-size:0.95rem;color:var(--text-sub);font-weight:600;">
+                💡 <strong>Mẹo giảng dạy:</strong> Người có thể bấm nút <em>"📷 Thay ảnh của bạn"</em> ở góc ảnh để tải hình chụp màn hình thực tế hoặc ảnh cá nhân từ máy tính lên bài giảng ngay lập tức!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TRẠM 2: GIẢI PHẪU GIAO DIỆN GEMINI – 3 CON ĐƯỜNG TẠO KỸ NĂNG
+             ================================================================= -->
+        <section class="station-panel" id="station-1" data-speech="Trạm hai: Giải phẫu thực tế giao diện Gemini và ba con đường khởi tạo kỹ năng. Khi bạn mở Gemini, vào mục Tiện ích rồi chọn Kỹ năng, hệ thống cung cấp ba lựa chọn: Một là Tạo với Gemini qua trò chuyện, hai là Tạo thủ công để kiểm soát một trăm phần trăm, và ba là Tải tệp lên từ máy tính. Hãy bấm vào từng nút mô phỏng để xem hướng dẫn chi tiết.">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 2 / 8 • THAO TÁC TRÊN GIAO DIỆN THẬT</span>
+              <h2 class="station-title">GIẢI PHẪU 3 TÙY CHỌN TẠO KỸ NĂNG TRÊN GEMINI</h2>
+              <p class="station-subtitle">Đường dẫn thực tế: Mở <strong>Gemini</strong> ➔ Nhấn <strong>Tiện ích (Extensions/Gems)</strong> ➔ Chọn <strong>Kỹ năng (Skills)</strong> ➔ Chọn 1 trong 3 cách sau:</p>
+            </div>
+          </div>
+
+          <!-- 3 NÚT MÔ PHỎNG GIAO DIỆN GEMINI -->
+          <div class="interactive-tabs">
+            <button class="itab-btn active" id="method-btn-1" onclick="window.selectCreationMethod(1)">
+              ✨ Cách 1: Tạo với Gemini (Trò chuyện)
+            </button>
+            <button class="itab-btn" id="method-btn-2" onclick="window.selectCreationMethod(2)">
+              🛠️ Cách 2: Tạo Thủ Công (Tự thiết lập)
+            </button>
+            <button class="itab-btn" id="method-btn-3" onclick="window.selectCreationMethod(3)">
+              📂 Cách 3: Tải Tệp Lên (Upload File)
+            </button>
+          </div>
+
+          <!-- CHI TIẾT TỪNG CÁCH (DYNAMIC CONTENT) -->
+          <div class="grid-2">
+            <div class="lux-card" id="method-detail-card">
+              <!-- Nội dung được cập nhật mượt mà qua JS -->
+            </div>
+
+            <div class="lux-card">
+              <span class="card-badge badge-indigo">📊 BẢNG ĐỐI CHIẾU NHANH 3 PHƯƠNG THỨC</span>
+              <h3 class="card-title">Nên Chọn Cách Nào Cho Công Việc Của Bạn?</h3>
+              <table class="edu-table">
+                <thead>
+                  <tr>
+                    <th>Phương thức</th>
+                    <th>Tốc độ</th>
+                    <th>Độ kiểm soát</th>
+                    <th>Khi nào nên dùng?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:var(--primary);">1. Tạo với Gemini</strong></td>
+                    <td>⚡ Nhanh nhất</td>
+                    <td>Khá (AI tự viết)</td>
+                    <td>Khi mới có ý tưởng sơ bộ, muốn AI hỏi đáp và tự viết khung quy tắc giúp mình.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:var(--secondary);">2. Tạo Thủ Công</strong></td>
+                    <td>⏱️ Trung bình</td>
+                    <td>🎯 Tuyệt đối 100%</td>
+                    <td>Khi đã có bộ lệnh chuẩn (như kịch bản V88, giáo án, kế toán) cần chính xác từng chữ.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:var(--emerald);">3. Tải Tệp Lên</strong></td>
+                    <td>🚀 1 cú click</td>
+                    <td>Cao (Theo file)</td>
+                    <td>Khi đã có sẵn file <code>SKILL.md</code>, giáo trình <code>.docx</code> hoặc quy chế trên máy tính.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="margin-top:16px;padding:14px 18px;border-radius:14px;background:var(--amber-soft);border-left:5px solid var(--amber);">
+                <strong style="color:var(--amber);">💡 Bí quyết Chuyên gia:</strong> Bạn có thể kết hợp cả 3! Dùng <em>"Tạo với Gemini"</em> để lấy khung sườn ban đầu, sau đó vào <em>"Tạo thủ công"</em> để tinh chỉnh câu chữ sắc bén, rồi xuất ra file <em>"SKILL.md"</em> cất vào máy tính.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TRẠM 3: CHỌN MÔ HÌNH (FLASH, PRO, ARGON) & MỨC ĐỘ TƯ DUY
+             ================================================================= -->
+        <section class="station-panel" id="station-2" data-speech="Trạm ba: Bí quyết chọn Bộ não mô hình và Mức độ tư duy khi tạo kỹ năng. Trên giao diện trò chuyện có các mô hình như Flash, Flash Lite, Pro và Argon, đi kèm ba mức độ tư duy Thấp, Trung bình và Cao. Hãy bấm vào từng loại công việc bên trái để hệ thống chỉ định cấu hình tối ưu nhất.">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 3 / 8 • TỐI ƯU HÓA TRÍ TUỆ AI</span>
+              <h2 class="station-title">CHỌN MÔ HÌNH (FLASH / PRO / ARGON) & MỨC ĐỘ TƯ DUY</h2>
+              <p class="station-subtitle">Tại sao có lúc AI làm rất sâu sắc, có lúc lại hời hợt? Bí mật nằm ở việc chọn đúng "Bộ não" và "Tầng tư duy".</p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <!-- BỘ CHỌN TÌNH HUỐNG TƯƠNG TÁC -->
+            <div class="lux-card">
+              <span class="card-badge badge-violet">🎛️ BỘ KHUYẾN NGHỊ THÔNG MINH</span>
+              <h3 class="card-title">Bước 1: Chọn Loại Kỹ Năng Bạn Đang Muốn Tạo</h3>
+              <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px;">
+                <button class="itab-btn active" id="sim-task-1" style="justify-content:flex-start;text-align:left;" onclick="window.selectModelScenario(1)">
+                  🔥 1. Kỹ năng Chuyên sâu, Tự động hóa, Code HTML, JSON Video, Kế toán
+                </button>
+                <button class="itab-btn" id="sim-task-2" style="justify-content:flex-start;text-align:left;" onclick="window.selectModelScenario(2)">
+                  ✍️ 2. Kỹ năng Nghiệp vụ thường ngày: Viết bài Facebook, Thư ngỏ, Tóm tắt
+                </button>
+                <button class="itab-btn" id="sim-task-3" style="justify-content:flex-start;text-align:left;" onclick="window.selectModelScenario(3)">
+                  ⚡ 3. Sửa đổi nhỏ, đổi tên kỹ năng, kiểm tra nhanh chính tả
+                </button>
+              </div>
+
+              <div style="margin-top:20px;padding:18px;border-radius:16px;background:var(--bg-secondary);border:2px solid var(--border-color);" id="model-recommendation-box">
+                <!-- Cập nhật tự động qua JS -->
+              </div>
+            </div>
+
+            <!-- GIẢI THÍCH 3 MỨC ĐỘ TƯ DUY (THINKING LEVELS) -->
+            <div class="lux-card">
+              <span class="card-badge badge-cyan">🧠 GIẢI PHẪU 3 MỨC ĐỘ TƯ DUY (THINKING LEVEL)</span>
+              <h3 class="card-title">Mức Độ Tư Duy Dùng Để Làm Gì?</h3>
+              <p style="color:var(--text-sub);font-weight:600;margin-bottom:14px;">
+                Mức độ tư duy là thời gian bạn cho phép AI <strong>"suy nghĩ ngầm, tự kiểm tra lỗi và tự phản biện"</strong> trước khi viết ra câu trả lời:
+              </p>
+
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="padding:14px 16px;border-radius:14px;background:var(--bg-secondary);border-left:6px solid var(--text-muted);">
+                  <div style="display:flex;justify-content:space-between;font-weight:800;">
+                    <span>🌱 1. Tư Duy Thấp (Low Thinking)</span>
+                    <span style="color:var(--text-muted);">Phản hồi: 1 giây</span>
+                  </div>
+                  <p style="font-size:0.95rem;color:var(--text-sub);margin-top:4px;">AI trả lời ngay lập tức theo phản xạ bề mặt. Dùng khi dịch thuật ngắn, sửa lỗi chính tả, đặt tên nhanh.</p>
+                </div>
+
+                <div style="padding:14px 16px;border-radius:14px;background:var(--secondary-soft);border-left:6px solid var(--secondary);">
+                  <div style="display:flex;justify-content:space-between;font-weight:800;color:var(--secondary);">
+                    <span>⚖️ 2. Tư Duy Trung Bình (Medium Thinking)</span>
+                    <span>Phản hồi: 3–5 giây</span>
+                  </div>
+                  <p style="font-size:0.95rem;color:var(--text-sub);margin-top:4px;">AI dừng lại lập dàn ý và sắp xếp các bước logic cơ bản. Phù hợp viết bài truyền thông, soạn kế hoạch thường ngày.</p>
+                </div>
+
+                <div style="padding:14px 16px;border-radius:14px;background:var(--primary-soft);border-left:6px solid var(--primary);">
+                  <div style="display:flex;justify-content:space-between;font-weight:800;color:var(--primary);">
+                    <span>💎 3. Tư Duy Cao (High Thinking - KHUYÊN DÙNG KHI TẠO SKILL)</span>
+                    <span>Suy luận đa tầng</span>
+                  </div>
+                  <p style="font-size:0.95rem;color:var(--text-sub);margin-top:4px;">AI phân tích sâu mục tiêu, lường trước các trường hợp ngoại lệ, tự rà soát xung đột câu lệnh để xuất ra bộ quy tắc Kỹ năng chặt chẽ nhất!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TRẠM 4: MÔ PHỎNG ĐỘNG "BÁNH XE CUỘC ĐỜI & BÁNH XE TRI THỨC AI"
+             ================================================================= -->
+        <section class="station-panel" id="station-3" data-speech="Trạm bốn: Mô phỏng động Bánh xe cuộc đời và Bánh xe tri thức A I. Trục giữa là chính mình và mục tiêu. Xung quanh là sáu nan hoa: Cảm xúc là ưu tiên số một, cùng Kiến thức chuyên môn, Kỹ năng A I, Sức khỏe, Mối quan hệ và Thời gian tài chính. Nếu chỉ đẩy A I lên cao mà thiếu kiến thức chuyên môn, bánh xe sẽ méo mó, lăn lộ cộ và sụp đổ vì A I làm sai cũng không biết. Khi phát triển tròn đều, bánh xe sẽ lăn êm ái và viên mãn.">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 4 / 8 • MÔ PHỎNG ĐỒ HỌA TƯƠNG TÁC 60FPS</span>
+              <h2 class="station-title">BÁNH XE CUỘC ĐỜI & BÁNH XE TRI THỨC AI</h2>
+              <p class="station-subtitle">Trục giữa là <strong>Chính Mình & Mục Tiêu</strong>. Kéo các thanh trượt hoặc bấm 3 nút kịch bản để xem bánh xe lăn trên đường đời!</p>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <button class="ctrl-btn" style="background:var(--primary);color:#fff;border:none;" onclick="window.setWheelPreset('loco')">
+                ⚠️ Thử: Bánh Xe Lộ Cộ (AI Cao - Thiếu Kiến Thức)
+              </button>
+              <button class="ctrl-btn" style="background:var(--cyan);color:#fff;border:none;" onclick="window.setWheelPreset('small_round')">
+                🟢 Thử: Nhỏ Mà Tròn Đều (Êm Đềm)
+              </button>
+              <button class="ctrl-btn" style="background:var(--emerald);color:#fff;border:none;" onclick="window.setWheelPreset('perfect')">
+                🌟 Thử: Tròn Đầy Viên Mãn 100%
+              </button>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <!-- BẢNG ĐIỀU KHIỂN 6 CẠNH CỦA BÁNH XE -->
+            <div class="lux-card">
+              <span class="card-badge badge-red">🎛️ ĐIỀU CHỈNH 6 GÓC CẠNH PHÁT TRIỂN</span>
+              <div class="wheel-slider-row">
+                <label><span>❤️ 1. Cảm Xúc Bình An (Ưu tiên số 1)</span> <span id="lbl-w0" style="color:var(--primary);">85%</span></label>
+                <input type="range" id="sl-w0" min="15" max="100" value="85" oninput="window.updateWheelSimulation()">
+              </div>
+              <div class="wheel-slider-row">
+                <label><span>🧠 2. Kiến Thức Chuyên Môn Nghề Nghiệp</span> <span id="lbl-w1" style="color:var(--secondary);">85%</span></label>
+                <input type="range" id="sl-w1" min="15" max="100" value="85" oninput="window.updateWheelSimulation()">
+              </div>
+              <div class="wheel-slider-row">
+                <label><span>🤖 3. Kỹ Năng Điều Khiển AI (Skills)</span> <span id="lbl-w2" style="color:var(--emerald);">85%</span></label>
+                <input type="range" id="sl-w2" min="15" max="100" value="85" oninput="window.updateWheelSimulation()">
+              </div>
+              <div class="wheel-slider-row">
+                <label><span>💪 4. Sức Khỏe Thân Tâm</span> <span id="lbl-w3" style="color:var(--amber);">85%</span></label>
+                <input type="range" id="sl-w3" min="15" max="100" value="85" oninput="window.updateWheelSimulation()">
+              </div>
+              <div class="wheel-slider-row">
+                <label><span>🤝 5. Mối Quan Hệ Chất Lượng</span> <span id="lbl-w4" style="color:var(--cyan);">85%</span></label>
+                <input type="range" id="sl-w4" min="15" max="100" value="85" oninput="window.updateWheelSimulation()">
+              </div>
+              <div class="wheel-slider-row" style="margin-bottom:0;">
+                <label><span>⏳ 6. Thời Gian & Tài Chính</span> <span id="lbl-w5" style="color:var(--violet);">85%</span></label>
+                <input type="range" id="sl-w5" min="15" max="100" value="85" oninput="window.updateWheelSimulation()">
+              </div>
+            </div>
+
+            <!-- MÀN HÌNH CANVAS MÔ PHỎNG BÁNH XE LĂN THỰC TẾ -->
+            <div class="lux-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+              <div id="wheel-verdict-banner" style="padding:14px 18px;border-radius:14px;font-weight:800;font-size:1.05rem;text-align:center;margin-bottom:12px;">
+                🌟 Bánh xe tròn đầy, lăn êm đềm và bứt phá!
+              </div>
+              <div style="background:#0f172a;border-radius:16px;overflow:hidden;border:2px solid var(--border-color);position:relative;">
+                <canvas id="lifeWheelCanvas" width="680" height="330" style="width:100%;height:310px;display:block;"></canvas>
+              </div>
+              <p style="font-size:0.95rem;color:var(--text-sub);font-weight:600;margin-top:10px;">
+                🎯 <strong>Triết lý cốt lõi:</strong> Nếu người dùng AI không có kiến thức chuyên môn (cạnh số 2 thấp mà cạnh số 3 cao), bánh xe sẽ biến dạng lộ cộ, AI làm sai cũng không phát hiện được. Phát triển đồng đều giúp bánh xe lăn êm ái!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TRẠM 5: CẦM TAY CHỈ VIỆC – 4 BƯỚC VÀNG TẠO KỸ NĂNG CHUẨN
+             ================================================================= -->
+        <section class="station-panel" id="station-4" data-speech="Trạm năm: Cầm tay chỉ việc bốn bước vàng tạo kỹ năng chuẩn quốc tế. Bước một: Đặt tên ngắn gọn không dấu nối bằng gạch ngang. Bước hai: Viết mô tả kích hoạt thật rõ như một công tắc tự động. Bước ba: Viết hướng dẫn chi tiết gồm vai trò, quy trình và điều cấm kỵ. Bước bốn: Đưa vào một ví dụ mẫu hoàn hảo nhất.">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 5 / 8 • QUY TRÌNH TỪNG BƯỚC RÀNH MẠCH</span>
+              <h2 class="station-title">4 BƯỚC VÀNG THIẾT LẬP MỘT KỸ NĂNG HOÀN HẢO</h2>
+              <p class="station-subtitle">Bấm vào từng bước dưới đây để xem giải thích, tác dụng thực tế và đối chiếu cách viết Đúng vs Sai.</p>
+            </div>
+          </div>
+
+          <div class="interactive-tabs">
+            <button class="itab-btn active" id="step-tab-1" onclick="window.selectStepGuide(1)">1️⃣ Bước 1: Đặt Tên (Name)</button>
+            <button class="itab-btn" id="step-tab-2" onclick="window.selectStepGuide(2)">2️⃣ Bước 2: Mô Tả Kích Hoạt</button>
+            <button class="itab-btn" id="step-tab-3" onclick="window.selectStepGuide(3)">3️⃣ Bước 3: Hướng Dẫn (Instructions)</button>
+            <button class="itab-btn" id="step-tab-4" onclick="window.selectStepGuide(4)">4️⃣ Bước 4: Ví Dụ Mẫu (Golden Sample)</button>
+          </div>
+
+          <div class="grid-2">
+            <div class="lux-card" id="step-guide-content">
+              <!-- Nội dung chi tiết từng bước render qua JS -->
+            </div>
+
+            <div class="lux-card">
+              <span class="card-badge badge-amber">🔍 SO SÁNH TRỰC QUAN: VIẾT SAI VS VIẾT ĐÚNG</span>
+              <div id="step-comparison-box">
+                <!-- Nội dung đối chiếu Đúng/Sai render qua JS -->
+              </div>
+              <div class="img-showcase" style="margin-top:16px;min-height:165px;">
+                <img id="img-station-5" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&auto=format&fit=crop&q=80" alt="Quy trình 4 bước" style="height:175px;">
+                <label class="img-upload-btn">
+                  📷 Thay ảnh minh họa
+                  <input type="file" accept="image/*" style="display:none;" onchange="window.uploadStationImage(event, 'img-station-5')">
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TRẠM 6: BÀN LÀM VIỆC GIẢ LẬP GEMINI (THỰC HÀNH & XUẤT SKILL.md)
+             ================================================================= -->
+        <section class="station-panel" id="station-5" data-speech="Trạm sáu: Bàn làm việc giả lập Gemini. Tại đây bạn có thể bấm chọn ngay năm mẫu kỹ năng vàng ở cột bên trái hoặc tự tay gõ thử vào ba ô bên phải. Hệ thống sẽ chấm điểm tự động theo thời gian thực và cho phép bạn tải về file SKILL chấm M D để nạp thẳng lên Gemini.">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 6 / 8 • PHÒNG THỰC HÀNH GIẢ LẬP TRỰC TIẾP</span>
+              <h2 class="station-title">BÀN LÀM VIỆC GIẢ LẬP GEMINI & KHO MẪU VÀNG</h2>
+              <p class="station-subtitle">Thử gõ trực tiếp hoặc chọn 1 mẫu bên trái để nạp vào bộ giả lập, kiểm tra điểm chuẩn xác và xuất file <code>SKILL.md</code>!</p>
+            </div>
+            <div style="background:var(--emerald-soft);border:2px solid var(--emerald);padding:10px 18px;border-radius:14px;text-align:center;">
+              <div style="font-size:0.8rem;font-weight:800;color:var(--emerald);">ĐIỂM CHUẨN KỸ NĂNG</div>
+              <div id="skill-score-badge" style="font-size:1.6rem;font-weight:900;color:var(--emerald);">100 / 100</div>
+            </div>
+          </div>
+
+          <div class="grid-2" style="grid-template-columns: 38% 62%;">
+            <!-- CỘT TRÁI: KHO 5 MẪU KỸ NĂNG VÀNG -->
+            <div class="lux-card">
+              <span class="card-badge badge-indigo">💎 KHO 5 MẪU KỸ NĂNG VÀNG (BẤM ĐỂ NẠP)</span>
+              <h3 class="card-title">Chọn Nhanh Mẫu Thực Chiến:</h3>
+              <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px;">
+                <button class="itab-btn" style="justify-content:flex-start;text-align:left;" onclick="window.loadSkillTemplate('giao_an')">
+                  📄 1. Mẫu Soạn Giáo Án & Quản Lý Lớp Học
+                </button>
+                <button class="itab-btn" style="justify-content:flex-start;text-align:left;" onclick="window.loadSkillTemplate('reels_suno')">
+                  🎬 2. Mẫu Kịch Bản Video Reels & Nhạc Suno
+                </button>
+                <button class="itab-btn" style="justify-content:flex-start;text-align:left;" onclick="window.loadSkillTemplate('ke_toan')">
+                  📊 3. Mẫu Xử Lý Số Liệu Kế Toán & Excel
+                </button>
+                <button class="itab-btn" style="justify-content:flex-start;text-align:left;" onclick="window.loadSkillTemplate('html_slide')">
+                  🌐 4. Mẫu Thiết Kế Bài Giảng HTML Tương Tác
+                </button>
+                <button class="itab-btn" style="justify-content:flex-start;text-align:left;" onclick="window.loadSkillTemplate('phan_bien')">
+                  🧠 5. Mẫu Chuyên Gia Phản Biện & Tối Ưu Lệnh
+                </button>
+              </div>
+
+              <div style="margin-top:18px;padding:14px;border-radius:14px;background:var(--bg-secondary);">
+                <div style="font-weight:800;margin-bottom:6px;color:var(--primary);">📋 Hướng dẫn sử dụng kết quả:</div>
+                <p style="font-size:0.94rem;color:var(--text-sub);font-weight:600;">
+                  • Bấm <strong>"Sao Chép Toàn Bộ"</strong> để dán vào mục <em>Tạo thủ công</em> trên Gemini.<br>
+                  • Hoặc bấm <strong>"Tải File SKILL.md"</strong> để dùng cho mục <em>Tải tệp lên</em>.
+                </p>
+              </div>
+            </div>
+
+            <!-- CỘT PHẢI: KHUNG GIẢ LẬP NHẬP LIỆU GEMINI -->
+            <div class="lux-card">
+              <div style="margin-bottom:14px;">
+                <label style="display:block;font-weight:800;margin-bottom:6px;color:var(--text-main);">
+                  1. Tên Kỹ Năng (Name) — <span style="font-weight:600;color:var(--text-muted);">Chữ thường, không dấu, nối bằng dấu gạch ngang (-)</span>
+                </label>
+                <input type="text" id="sim-name" class="sim-input" value="soan-giao-an-thuc-chien" oninput="window.validateSkillSimulator()">
+                <div id="fb-name" class="sim-feedback" style="color:var(--emerald);">✅ Tên kỹ năng đúng chuẩn quốc tế!</div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label style="display:block;font-weight:800;margin-bottom:6px;color:var(--text-main);">
+                  2. Mô Tả Kích Hoạt (Description) — <span style="font-weight:600;color:var(--text-muted);">Công tắc chỉ rõ khi nào AI tự động chạy</span>
+                </label>
+                <textarea id="sim-desc" class="sim-textarea" style="height:82px;" oninput="window.validateSkillSimulator()">Chuyên gia thiết kế giáo án và hoạt động lớp học. Kích hoạt khi người dùng yêu cầu soạn bài giảng, giáo án, kế hoạch dạy học hoặc quản lý lớp chủ nhiệm.</textarea>
+                <div id="fb-desc" class="sim-feedback" style="color:var(--emerald);">✅ Mô tả rõ cả chức năng lẫn tín hiệu kích hoạt!</div>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label style="display:block;font-weight:800;margin-bottom:6px;color:var(--text-main);">
+                  3. Hướng Dẫn Chi Tiết (Instructions) — <span style="font-weight:600;color:var(--text-muted);">Vai trò, Quy trình từng bước, Quy tắc & Ví dụ</span>
+                </label>
+                <textarea id="sim-inst" class="sim-textarea" style="height:145px;" oninput="window.validateSkillSimulator()"># VAI TRÒ
+Bạn là Chuyên gia Sư phạm 25 năm kinh nghiệm.
+
+# QUY TRÌNH XỬ LÝ
+- Bước 1: Xác định mục tiêu bài học và đối tượng học sinh.
+- Bước 2: Thiết kế bảng tiến trình hoạt động ngắn gọn, giàu tính tương tác.
+
+# QUY TẮC BẮT BUỘC
+- Trình bày dạng bảng rõ ràng, chữ to, chỉ dùng từ khóa cốt lõi.
+- Tuyệt đối không viết văn xuôi dài dòng.</textarea>
+                <div id="fb-inst" class="sim-feedback" style="color:var(--emerald);">✅ Cấu trúc hướng dẫn chặt chẽ, đầy đủ các tầng!</div>
+              </div>
+
+              <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                <button class="ctrl-btn" style="background:var(--primary);color:#fff;border:none;padding:12px 20px;font-size:1rem;" onclick="window.copySimulatedSkill()">
+                  📋 Sao Chép Toàn Bộ Nội Dung
+                </button>
+                <button class="ctrl-btn" style="background:var(--emerald);color:#fff;border:none;padding:12px 20px;font-size:1rem;" onclick="window.downloadSkillMarkdown()">
+                  📥 Tải File SKILL.md (Để Upload Lên Gemini)
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TRẠM 7: TRẠM BÌNH YÊN XANH – ĐỒNG BỘ HƠI THỞ 5S-5S & VIDEO BÀI GIẢNG
+             ================================================================= -->
+        <section class="station-panel" id="station-6" data-speech="Trạm bảy: Trạm Bình Yên Xanh và Video hướng dẫn thực hành. Làm chủ công nghệ bắt đầu từ sự tĩnh tại của Thân, Tâm và Trí. Hãy hít vào năm giây, thở ra năm giây theo vòng tròn ánh sáng và theo dõi video minh họa trực quan.">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 7 / 8 • THÂN - TÂM - TRÍ & ĐA PHƯƠNG TIỆN</span>
+              <h2 class="station-title">TRẠM BÌNH YÊN XANH (HƠI THỞ 5S–5S) & VIDEO BÀI GIẢNG</h2>
+              <p class="station-subtitle">Giữ tâm bình an, trí sáng suốt để điều khiển công nghệ phục vụ cuộc sống thảnh thơi.</p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <!-- VÒNG TRÒN ĐỒNG BỘ HƠI THỞ 5S - 5S -->
+            <div class="lux-card" style="text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+              <span class="card-badge badge-emerald">🌿 ĐỒNG BỘ HƠI THỞ 5 GIÂY HÍT VÀO – 5 GIÂY THỞ RA</span>
+              <div style="position:relative;width:240px;height:240px;display:flex;align-items:center;justify-content:center;margin:14px 0;">
+                <canvas id="breathCanvas" width="240" height="240"></canvas>
+                <div id="breath-text" style="position:absolute;font-size:1.35rem;font-weight:900;color:var(--emerald);">
+                  Hít vào...
+                </div>
+              </div>
+              <p style="font-size:1rem;font-weight:600;color:var(--text-sub);max-width:460px;">
+                "Khi tâm tĩnh lặng, mỗi câu lệnh bạn trao cho AI đều mang năng lượng của sự minh triết và rõ ràng."
+              </p>
+            </div>
+
+            <!-- TRÌNH PHÁT VIDEO YOUTUBE TƯƠNG TÁC -->
+            <div class="lux-card">
+              <span class="card-badge badge-red">🎬 VIDEO MINH HỌA THỰC HÀNH (YOUTUBE EMBED)</span>
+              <div style="display:flex;gap:8px;margin-bottom:12px;">
+                <input type="text" id="yt-url-input" class="sim-input" placeholder="Dán link YouTube bài giảng của bạn vào đây..." value="https://www.youtube.com/watch?v=jfKfPfyJRdk">
+                <button class="ctrl-btn" style="background:var(--primary);color:#fff;border:none;" onclick="window.updateYoutubeEmbed()">
+                  ▶️ Phát Video
+                </button>
+              </div>
+              <div style="border-radius:16px;overflow:hidden;border:2px solid var(--border-color);background:#000;aspect-ratio:16/9;">
+                <iframe id="yt-iframe" width="100%" height="100%" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TRẠM 8: ĐẤU TRƯỜNG KIỂM TRA NHANH (CÓ PHÁO HOA) & KÝ TÊN CAM KẾT
+             ================================================================= -->
+        <section class="station-panel" id="station-7" data-speech="Trạm tám: Đấu trường kiểm tra nhanh và Bảng ký tên cam kết. Hãy trả lời ba câu hỏi trắc nghiệm để bắn pháo hoa chiến thắng, ghi nhớ ba từ khóa cốt lõi và ký tên xác nhận làm chủ kỹ năng A I ngay hôm nay!">
+          <div class="station-header">
+            <div>
+              <span class="station-kicker">TRẠM 8 / 8 • ĐÚC KẾT & HÀNH ĐỘNG NGAY</span>
+              <h2 class="station-title">ĐẤU TRƯỜNG KIỂM TRA NHANH & KÝ TÊN CAM KẾT</h2>
+              <p class="station-subtitle">Chọn đáp án đúng để kích hoạt pháo hoa chúc mừng và lưu chữ ký cam kết tạo Kỹ năng đầu tiên!</p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <!-- 3 CÂU HỎI TRẮC NGHIỆM TƯƠNG TÁC -->
+            <div class="lux-card">
+              <span class="card-badge badge-amber">🏆 THỬ THÁCH 3 CÂU HỎI NHỚ NGAY TẠI LỚP</span>
+
+              <div style="margin-bottom:16px;">
+                <div style="font-weight:800;margin-bottom:8px;">Câu 1: Cách đặt tên kỹ năng (Name) nào sau đây là ĐÚNG chuẩn?</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <button class="ctrl-btn" onclick="window.answerQuiz(1, false, this)">A. Soạn Giáo Án</button>
+                  <button class="ctrl-btn" onclick="window.answerQuiz(1, true, this)">B. soan-giao-an</button>
+                  <button class="ctrl-btn" onclick="window.answerQuiz(1, false, this)">C. soan_giao_an 123</button>
+                </div>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <div style="font-weight:800;margin-bottom:8px;">Câu 2: Khi tạo kỹ năng chuyên sâu (Code HTML, JSON, Kế toán), nên chọn cấu hình nào?</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <button class="ctrl-btn" onclick="window.answerQuiz(2, false, this)">A. Flash + Tư duy thấp</button>
+                  <button class="ctrl-btn" onclick="window.answerQuiz(2, true, this)">B. Argon/Pro + Tư duy cao</button>
+                  <button class="ctrl-btn" onclick="window.answerQuiz(2, false, this)">C. Không cần chọn</button>
+                </div>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <div style="font-weight:800;margin-bottom:8px;">Câu 3: Phần nào trong Kỹ năng đóng vai trò là "Công tắc tự động kích hoạt"?</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <button class="ctrl-btn" onclick="window.answerQuiz(3, true, this)">A. Mô tả (Description)</button>
+                  <button class="ctrl-btn" onclick="window.answerQuiz(3, false, this)">B. Tiêu đề phụ</button>
+                  <button class="ctrl-btn" onclick="window.answerQuiz(3, false, this)">C. Ảnh đại diện</button>
+                </div>
+              </div>
+
+              <!-- 3 TỪ KHÓA VÀNG -->
+              <div style="padding:14px;border-radius:14px;background:var(--grad-banner);border:2px solid var(--border-color);">
+                <div style="font-weight:900;color:var(--primary);margin-bottom:6px;">🔑 3 TỪ KHÓA KHẮC CỐT GHI TÂM:</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <span class="card-badge badge-red">1. ĐÓNG GÓI QUY TẮC</span>
+                  <span class="card-badge badge-indigo">2. CÔNG TẮC KÍCH HOẠT</span>
+                  <span class="card-badge badge-emerald">3. TRÍ TUỆ DẪN DẮT AI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- BẢNG KÝ TÊN CAM KẾT & KẾT NỐI -->
+            <div class="lux-card">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <span class="card-badge badge-indigo">✍️ BẢNG KÝ TÊN CAM KẾT THỰC HÀNH</span>
+                <div style="display:flex;gap:8px;">
+                  <button class="ctrl-btn" onclick="window.clearSignature()">🗑️ Xóa Ký Lại</button>
+                  <button class="ctrl-btn" style="background:var(--emerald);color:#fff;border:none;" onclick="window.celebrateCommitment()">🎉 Xác Nhận Cam Kết</button>
+                </div>
+              </div>
+              <p style="font-size:0.95rem;color:var(--text-sub);font-weight:600;margin-bottom:10px;">
+                Dùng chuột hoặc ngón tay ký tên vào khung dưới đây để cam kết tạo ít nhất 1 Kỹ năng AI phục vụ công việc ngay hôm nay:
+              </p>
+              <div style="border:2px dashed var(--secondary);border-radius:16px;background:#ffffff;overflow:hidden;">
+                <canvas id="sigCanvas" width="600" height="190" style="width:100%;height:185px;display:block;cursor:crosshair;"></canvas>
+              </div>
+
+              <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+                <a id="link-yt-btn" href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="ctrl-btn" style="text-decoration:none;background:#dc2626;color:#fff;border:none;">
+                  ▶️ Kênh YouTube Bài Giảng
+                </a>
+                <a id="link-zalo-btn" href="https://zalo.me" target="_blank" rel="noopener noreferrer" class="ctrl-btn" style="text-decoration:none;background:#0284c7;color:#fff;border:none;">
+                  💬 Nhóm Hỗ Trợ Zalo
+                </a>
+                <a id="link-fb-btn" href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="ctrl-btn" style="text-decoration:none;background:#4f46e5;color:#fff;border:none;">
+                  🌐 Fanpage Chia Sẻ AI
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- ==================== BOTTOM NAVIGATION DOCK ==================== -->
+    <footer class="bottom-dock">
+      <button class="ctrl-btn" onclick="window.stepStation(-1)">◀ Trạm Trước</button>
+
+      <div class="dock-dots" id="dock-dots">
+        <button class="dock-dot active" onclick="window.goToStation(0)">1</button>
+        <button class="dock-dot" onclick="window.goToStation(1)">2</button>
+        <button class="dock-dot" onclick="window.goToStation(2)">3</button>
+        <button class="dock-dot" onclick="window.goToStation(3)">4</button>
+        <button class="dock-dot" onclick="window.goToStation(4)">5</button>
+        <button class="dock-dot" onclick="window.goToStation(5)">6</button>
+        <button class="dock-dot" onclick="window.goToStation(6)">7</button>
+        <button class="dock-dot" onclick="window.goToStation(7)">8</button>
+      </div>
+
+      <button class="ctrl-btn" style="background:var(--primary);color:#fff;border-color:var(--primary);" onclick="window.stepStation(1)">
+        Trạm Tiếp Theo ▶
+      </button>
+    </footer>
+  </div>
+
+  <!-- MODAL CẤU HÌNH ĐƯỜNG DẪN CÁ NHÂN -->
+  <div class="modal-backdrop" id="config-modal">
+    <div class="modal-card">
+      <h3 class="card-title" style="color:var(--primary);">⚙️ Cấu Hình Link Bài Giảng & Kết Nối</h3>
+      <p style="font-size:0.95rem;color:var(--text-sub);margin-bottom:14px;">
+        Chủ nhân có thể gắn link YouTube, Zalo, Facebook cá nhân trước khi bấm "💾 Tải HTML" để gửi cho học viên:
+      </p>
+      <div style="margin-bottom:12px;">
+        <label style="font-weight:800;display:block;margin-bottom:4px;">Link Video YouTube:</label>
+        <input type="text" id="cfg-yt" class="sim-input" value="https://www.youtube.com/watch?v=jfKfPfyJRdk">
+      </div>
+      <div style="margin-bottom:12px;">
+        <label style="font-weight:800;display:block;margin-bottom:4px;">Link Zalo Hỗ Trợ:</label>
+        <input type="text" id="cfg-zalo" class="sim-input" value="https://zalo.me">
+      </div>
+      <div style="margin-bottom:18px;">
+        <label style="font-weight:800;display:block;margin-bottom:4px;">Link Facebook Fanpage:</label>
+        <input type="text" id="cfg-fb" class="sim-input" value="https://facebook.com">
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:10px;">
+        <button class="ctrl-btn" onclick="window.closeConfigModal()">Đóng</button>
+        <button class="ctrl-btn" style="background:var(--emerald);color:#fff;border:none;" onclick="window.saveConfigLinks()">✅ Lưu Cấu Hình</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ==========================================================================
+       KHAI BÁO BIẾN TOÀN CỤC Ở ĐẦU SCRIPT (ZERO-TDZ MANDATE)
+       ========================================================================== */
+    var currentStationIndex = 0;
+    var totalStations = 8;
+    var currentFontScale = 1.05;
+    var isSpeakingTTS = false;
+    var vnVoiceInstance = null;
+    var audioCtx = null;
+    var healingOsc = null;
+    var healingGain = null;
+    var isPlaying528 = false;
+    var wheelAnimAngle = 0;
+    var roadScrollOffset = 0;
+    var breathPhaseAngle = 0;
+    var confettiParticles = [];
+    var isDrawingSig = false;
+    var sigLastX = 0;
+    var sigLastY = 0;
+
+    var CREATION_METHODS_DATA = {
+      1: {
+        badge: '✨ CÁCH 1: TẠO VỚI GEMINI (TRÒ CHUYỆN TỰ ĐỘNG)',
+        title: 'Đối Thoại Tự Nhiên – AI Tự Viết Quy Tắc Cho Bạn',
+        desc: 'Bạn chỉ cần gõ mong muốn bằng lời nói bình thường. Gemini sẽ đóng vai chuyên gia phỏng vấn bạn 2–3 câu ngắn, sau đó tự động sinh ra Tên, Mô tả và toàn bộ Hướng dẫn.',
+        steps: [
+          '<strong>Bước 1:</strong> Bấm vào nút <em>"Tạo với Gemini"</em>, khung chat khởi tạo sẽ mở ra.',
+          '<strong>Bước 2 (Công thức 4 mảnh ghép):</strong> Nói rõ cho AI biết: (1) Mục đích kỹ năng, (2) Khi nào kích hoạt, (3) Định dạng đầu ra bắt buộc, và (4) Đưa 1 ví dụ mẫu.',
+          '<strong>Bước 3:</strong> Kiểm tra bản nháp AI vừa tạo ở khung bên cạnh và bấm <em>"Lưu (Save)"</em>.'
+        ],
+        why: 'Giúp người mới vượt qua nỗi sợ trang giấy trắng, chỉ mất 2 phút là có ngay kỹ năng đầu tiên!'
+      },
+      2: {
+        badge: '🛠️ CÁCH 2: TẠO THỦ CÔNG (KIỂM SOÁT TUYỆT ĐỐI 100%)',
+        title: 'Bảng Điều Khiển Trực Tiếp – Tự Tay Điền 3 Ô Cốt Lõi',
+        desc: 'Giao diện mở ra 3 ô trống rõ ràng để bạn tự dán bộ quy tắc chuẩn của mình vào mà không sợ AI tự ý thêm bớt câu chữ.',
+        steps: [
+          '<strong>Ô 1 - Tên kỹ năng (Name):</strong> Điền chữ thường không dấu, nối gạch ngang (VD: <code>quan-ly-lop-tb26ktd1</code>).',
+          '<strong>Ô 2 - Mô tả (Description):</strong> Viết câu lệnh công tắc chỉ định khi nào AI tự động kích hoạt kỹ năng này.',
+          '<strong>Ô 3 - Hướng dẫn (Instructions):</strong> Dán toàn bộ khung quy tắc, bảng biểu, cấu trúc code hoặc điều cấm kỵ vào đây.'
+        ],
+        why: 'Phù hợp nhất khi bạn đã có sẵn câu lệnh mẫu chuẩn xác (như kịch bản V88, quy tắc kế toán) và muốn kiểm soát 100%.'
+      },
+      3: {
+        badge: '📂 CÁCH 3: TẢI TỆP LÊN (UPLOAD FILE TRONG 1 CLICK)',
+        title: 'Nạp Thẳng File SKILL.md Hoặc Tài Liệu Từ Máy Tính',
+        desc: 'Thay vì gõ tay hay copy từng ô, bạn chọn tải trực tiếp tệp cấu hình kỹ năng hoặc tài liệu nghiệp vụ đã lưu sẵn trong ổ cứng D: hoặc E:.',
+        steps: [
+          '<strong>Bước 1:</strong> Chuẩn bị sẵn file <code>SKILL.md</code> (tải từ Trạm 6 của bài giảng này) hoặc file tài liệu hướng dẫn.',
+          '<strong>Bước 2:</strong> Bấm nút <em>"Tải tệp lên"</em> trên giao diện Kỹ năng của Gemini và chọn file từ máy tính.',
+          '<strong>Bước 3:</strong> Hệ thống tự động đọc toàn bộ cấu trúc trong file và kích hoạt kỹ năng ngay lập tức.'
+        ],
+        why: 'Cực kỳ tiện lợi để sao lưu dự phòng trên máy tính hoặc gửi file cho học viên, đồng nghiệp cài đặt trong 3 giây!'
+      }
+    };
+
+    var MODEL_SCENARIOS_DATA = {
+      1: {
+        model: 'Mô hình khuyên dùng: ARGON (hoặc PRO)',
+        thinking: 'Mức độ tư duy: TƯ DUY CAO (High Thinking)',
+        color: 'var(--primary)',
+        reason: 'Các kỹ năng như lập trình file HTML tương tác, xuất kịch bản JSON dựng video, hay xử lý bảng tính kế toán đòi hỏi độ chính xác tuyệt đối. Bật Tư duy cao giúp AI tự rà soát lỗi cú pháp và không bỏ sót bất kỳ quy tắc nào.'
+      },
+      2: {
+        model: 'Mô hình khuyên dùng: PRO',
+        thinking: 'Mức độ tư duy: TƯ DUY TRUNG BÌNH (Medium Thinking)',
+        color: 'var(--secondary)',
+        reason: 'Với các kỹ năng viết bài truyền thông Facebook, soạn thư ngỏ hay tóm tắt tài liệu, mô hình Pro kết hợp Tư duy trung bình mang lại giọng văn mượt mà, giàu cảm xúc với tốc độ phản hồi rất nhanh.'
+      },
+      3: {
+        model: 'Mô hình khuyên dùng: FLASH / FLASH-LITE',
+        thinking: 'Mức độ tư duy: TƯ DUY THẤP (Low Thinking)',
+        color: 'var(--emerald)',
+        reason: 'Khi bạn chỉ muốn đổi lại tên kỹ năng, sửa một vài từ khóa nhỏ hoặc thử nghiệm phản hồi tức thì, chọn Flash giúp tiết kiệm thời gian chờ đợi tối đa.'
+      }
+    };
+
+    var STEP_GUIDES_DATA = {
+      1: {
+        badge: '1️⃣ BƯỚC 1: NGHỆ THUẬT ĐẶT TÊN KỸ NĂNG (NAME)',
+        title: 'Định Danh Ngắn Gọn – Chuẩn Cú Pháp Hệ Thống',
+        bullets: [
+          '<strong>Quy tắc bắt buộc:</strong> Viết bằng chữ thường, không dấu tiếng Việt, các từ nối với nhau bằng dấu gạch ngang (<code>-</code>).',
+          '<strong>Độ dài lý tưởng:</strong> Từ 2 đến 5 từ, đọc lên biết ngay kỹ năng đó làm nghề gì.',
+          '<strong>Tại sao phải làm vậy?</strong> Giúp hệ thống AI nhận diện mã định danh nhanh nhất, không bị lỗi font khi xuất thành file <code>SKILL.md</code>.'
+        ],
+        wrong: '❌ Cách viết SAI: <code>Soạn Giáo Án Kế Toán!</code> (Có dấu tiếng Việt, viết hoa, chứa khoảng trắng và ký tự lạ)',
+        right: '✅ Cách viết ĐÚNG: <code>soan-giao-an-ke-toan</code> hoặc <code>kich-ban-video-reels</code>'
+      },
+      2: {
+        badge: '2️⃣ BƯỚC 2: VIẾT MÔ TẢ KÍCH HOẠT (DESCRIPTION)',
+        title: 'Chiếc Công Tắc Tự Động Quan Trọng Nhất Của Kỹ Năng',
+        bullets: [
+          '<strong>Tác dụng cốt lõi:</strong> AI đọc ô Mô tả này ở mọi cuộc trò chuyện để quyết định xem <em>"Có nên bật kỹ năng này lên hay không?"</em>.',
+          '<strong>Công thức vàng 2 vế:</strong> <code>[Chức năng chính của kỹ năng]</code> + <code>[Kích hoạt khi người dùng gõ từ khóa hoặc yêu cầu gì]</code>.',
+          '<strong>Tại sao nhiều người làm hỏng?</strong> Vì viết mô tả quá cụt lủn (chỉ 3–4 chữ) khiến AI không biết lúc nào cần chạy.'
+        ],
+        wrong: '❌ Cách viết SAI: <code>Dùng để làm video.</code> (Quá mơ hồ, AI không biết khi nào nên kích hoạt)',
+        right: '✅ Cách viết ĐÚNG: <code>Chuyên gia viết kịch bản video ngắn 9:16. Kích hoạt khi người dùng yêu cầu viết kịch bản Reels, TikTok hoặc gửi lời bài hát để dựng MV.</code>'
+      },
+      3: {
+        badge: '3️⃣ BƯỚC 3: HƯỚNG DẪN CHI TIẾT (INSTRUCTIONS)',
+        title: 'Bộ Luật Thép 3 Tầng Điều Khiển Hành Vi Của AI',
+        bullets: [
+          '<strong>Tầng 1 - Vai trò (Role):</strong> Định vị rõ chuyên gia (VD: Giảng viên kế toán 25 năm kinh nghiệm, Đạo diễn hình ảnh 8K).',
+          '<strong>Tầng 2 - Quy trình từng bước (Workflow):</strong> Bước 1 tiếp nhận gì ➔ Bước 2 xử lý thế nào ➔ Bước 3 xuất định dạng gì.',
+          '<strong>Tầng 3 - Hàng rào kỷ luật (Guardrails):</strong> Nêu rõ những điều cấm kỵ (Cấm viết văn xuôi dài dòng, cấm tự bịa số liệu).'
+        ],
+        wrong: '❌ Cách viết SAI: Viết một đoạn văn xuôi dài dằng dặc không xuống dòng, không phân mục rõ ràng.',
+        right: '✅ Cách viết ĐÚNG: Dùng các tiêu đề <code># VAI TRÒ</code>, <code># QUY TRÌNH</code>, <code># QUY TẮC BẮT BUỘC</code> tách biệt rành mạch.'
+      },
+      4: {
+        badge: '4️⃣ BƯỚC 4: ĐƯA VÍ DỤ MẪU VÀNG (GOLDEN SAMPLE)',
+        title: 'Một Bản Mẫu Thực Tế Bằng Mười Ngàn Lời Giải Thích',
+        bullets: [
+          '<strong>Bản chất:</strong> Đính kèm 1 kết quả đầu ra mẫu mà bạn ưng ý nhất vào cuối phần Hướng dẫn.',
+          '<strong>Tác dụng thần kỳ:</strong> AI có khả năng bắt chước khuôn mẫu (Pattern Matching) cực giỏi. Nhìn vào mẫu, AI sẽ sao chép chuẩn 100% cách chia cột, độ dài câu và phong thái ngôn từ.',
+          '<strong>Mẹo thực tiễn:</strong> Chỉ cần đưa 1 mẫu ngắn gọn nhưng chuẩn chỉnh nhất của bạn.'
+        ],
+        wrong: '❌ Thiếu sót phổ biến: Chỉ mô tả lý thuyết suông mà không cho AI xem mặt mũi bảng biểu mẫu trông ra sao.',
+        right: '✅ Cách làm ĐÚNG: Thêm mục <code># VÍ DỤ MẪU CHUẨN</code> ở cuối Instructions và dán 1 đoạn kết quả mẫu vào.'
+      }
+    };
+
+    var SKILL_TEMPLATES_DB = {
+      giao_an: {
+        name: 'soan-giao-an-quan-ly-lop',
+        desc: 'Chuyên gia thiết kế giáo án thực hành và quản lý học sinh lớp chủ nhiệm. Kích hoạt khi người dùng yêu cầu soạn giáo án, lập kế hoạch giảng dạy, nhận xét học sinh hoặc tạo biểu mẫu quản lý lớp.',
+        inst: '# VAI TRÒ\nBạn là Giảng viên giàu kinh nghiệm sư phạm và Quản lý giáo dục tận tâm.\n\n# QUY TRÌNH THỰC HIỆN\n1. Phân tích chủ đề bài học và đặc điểm học sinh.\n2. Thiết kế nội dung thành bảng biểu trực quan gồm: Hoạt động của Giáo viên - Hoạt động của Học sinh - Kết quả cần đạt.\n3. Đề xuất câu hỏi tương tác thực tế giúp học sinh dễ hiểu, dễ nhớ.\n\n# QUY TẮC BẮT BUỘC\n- Trình bày ngắn gọn bằng từ khóa đắt giá, không viết văn xuôi dài dòng.\n- Ngôn từ khích lệ, tích cực và chuẩn mực sư phạm.'
+      },
+      reels_suno: {
+        name: 'kich-ban-reels-nhac-suno',
+        desc: 'Đạo diễn kịch bản video ngắn 9:16 và sáng tác nhạc AI Suno. Kích hoạt khi người dùng yêu cầu viết kịch bản Reels, phân cảnh video hoặc viết lời bài hát và prompt nhạc Suno.',
+        inst: '# VAI TRÒ\nBạn là Đạo diễn hình ảnh điện ảnh 8K và Nhạc sĩ phối khí AI chuyên nghiệp.\n\n# QUY TRÌNH THỰC HIỆN\n1. Nếu làm nhạc Suno: Xuất rõ 2 phần [Style of Music bằng tiếng Anh] và [Lời bài hát có cấu trúc Verse, Chorus, Bridge].\n2. Nếu làm kịch bản Reels: Chia thành bảng phân cảnh gồm Thời lượng, Hình ảnh minh họa (Visual Prompt) và Lời dẫn truyền cảm.\n\n# QUY TẮC BẮT BUỘC\n- Hình ảnh mô tả giàu tính điện ảnh, ánh sáng ấm áp, chạm cảm xúc.\n- Không dùng dấu ba chấm (...) trong lời thoại để tránh ngắt quãng giọng đọc.'
+      },
+      ke_toan: {
+        name: 'chuyen-gia-ke-toan-bang-tinh',
+        desc: 'Chuyên gia kế toán doanh nghiệp, phần mềm MISA và chuẩn hóa dữ liệu Excel. Kích hoạt khi người dùng hỏi về nghiệp vụ kế toán, định khoản, thuế hoặc xử lý bảng tính Excel/Google Sheets.',
+        inst: '# VAI TRÒ\nBạn là Kế toán trưởng kiêm Giảng viên Kế toán Tài chính chuẩn mực.\n\n# QUY TRÌNH THỰC HIỆN\n1. Giải thích định khoản Nợ / Có và căn cứ nghiệp vụ rõ ràng.\n2. Xuất dữ liệu dạng bảng tính sạch, sẵn sàng copy sang Excel.\n\n# QUY TẮC BẮT BUỘC\n- Định dạng ngày tháng bắt buộc theo chuẩn Text DD/MM/YYYY.\n- Số hiệu hoặc mã số có 6 chữ số cần giữ nguyên các số 0 ở đầu (VD: 000123).\n- Tuyệt đối chính xác về con số và công thức.'
+      },
+      html_slide: {
+        name: 'thiet-ke-bai-giang-html-16-9',
+        desc: 'Kiến trúc sư thiết kế bài giảng tương tác Single-File HTML chuẩn màn hình 16:9. Kích hoạt khi người dùng yêu cầu tạo slide HTML, web app dạy học tương tác hoặc mô phỏng trực quan.',
+        inst: '# VAI TRÒ\nBạn là Chuyên gia UI/UX Sư phạm và Kỹ sư Front-End hàng đầu.\n\n# QUY TRÌNH THỰC HIỆN\n1. Thiết kế toàn bộ HTML, CSS và JavaScript trong 1 file duy nhất.\n2. Bố cục tràn màn hình 16:9 không có viền đen, có nút phóng to chữ A+/A++ cho mọi lứa tuổi.\n3. Tích hợp mô phỏng tương tác hai chiều, nút thay ảnh FileReader và giọng đọc tiếng Việt chuẩn vi-VN.\n\n# QUY TẮC BẮT BUỘC\n- Màu sắc đa dạng, độ tương phản cao, chữ to rõ ràng, chỉ dùng từ khóa cốt lõi.'
+      },
+      phan_bien: {
+        name: 'chuyen-gia-phan-bien-toi-uu-lenh',
+        desc: 'Chuyên gia phản biện và nâng cấp câu lệnh (Prompt Engineering). Kích hoạt khi người dùng gửi một ý tưởng hoặc câu lệnh nháp và yêu cầu phân tích, phản biện hoặc nâng cấp lên chuẩn chuyên gia.',
+        inst: '# VAI TRÒ\nBạn là Chuyên gia Phản biện Tư duy và Kiến trúc sư Prompt cấp cao.\n\n# QUY TRÌNH THỰC HIỆN\n1. Chỉ ra thẳng thắn 3 điểm yếu hoặc lỗ hổng trong câu lệnh ban đầu.\n2. Nâng cấp câu lệnh theo cấu trúc: Vai trò -> Mục tiêu -> Quy trình -> Ràng buộc định dạng.\n3. Đặt câu lệnh hoàn chỉnh vào trong một khung mã (Code Block) để người dùng chỉ việc bấm Copy.'
+      }
+    };
+
+    /* ==========================================================================
+       HÀM TIỆN ÍCH THÔNG BÁO TOAST (KHÔNG DÙNG ALERT)
+       ========================================================================== */
+    window.showToast = function(message) {
+      var toast = document.getElementById('toast-banner');
+      if (!toast) return;
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(function() {
+        toast.classList.remove('show');
+      }, 3400);
+    };
+
+    /* ==========================================================================
+       ĐIỀU HƯỚNG 8 TRẠM & GIAO DIỆN
+       ========================================================================== */
+    window.goToStation = function(index) {
+      if (index < 0) index = 0;
+      if (index >= totalStations) index = totalStations - 1;
+      currentStationIndex = index;
+
+      var panels = document.querySelectorAll('.station-panel');
+      for (var i = 0; i < panels.length; i++) {
+        panels[i].classList.toggle('active', i === index);
+      }
+
+      var railItems = document.querySelectorAll('.rail-item');
+      for (var j = 0; j < railItems.length; j++) {
+        railItems[j].classList.toggle('active', j === index);
+      }
+
+      var dots = document.querySelectorAll('.dock-dot');
+      for (var k = 0; k < dots.length; k++) {
+        dots[k].classList.toggle('active', k === index);
+      }
+
+      var viewport = document.getElementById('stage-viewport');
+      if (viewport) viewport.scrollTop = 0;
+
+      if (isSpeakingTTS) {
+        window.speakActiveStation();
+      }
+    };
+
+    window.stepStation = function(delta) {
+      window.goToStation(currentStationIndex + delta);
+    };
+
+    window.switchTheme = function(themeName) {
+      document.documentElement.setAttribute('data-view', themeName);
+      window.showToast('🎨 Đã chuyển sang giao diện: ' + themeName.toUpperCase());
+    };
+
+    window.switchFontFamily = function(fontCss) {
+      document.documentElement.style.setProperty('--font-primary', fontCss);
+      window.showToast('🔤 Đã cập nhật phông chữ bài giảng!');
+    };
+
+    window.scaleFontSize = function(delta) {
+      currentFontScale = Math.max(0.9, Math.min(1.38, currentFontScale + delta));
+      document.documentElement.style.setProperty('--font-scale', currentFontScale.toFixed(2));
+      window.showToast('🔍 Tỷ lệ cỡ chữ hiện tại: ' + Math.round(currentFontScale * 100) + '%');
+    };
+
+    /* ==========================================================================
+       TRẠM 1: CHUYỂN TAB KHI NÀO CẦN TẠO & TẢI ẢNH CÁ NHÂN
+       ========================================================================== */
+    window.switchWhenTab = function(mode) {
+      var yesBtn = document.getElementById('btn-when-yes');
+      var noBtn = document.getElementById('btn-when-no');
+      var yesPanel = document.getElementById('panel-when-yes');
+      var noPanel = document.getElementById('panel-when-no');
+
+      if (mode === 'yes') {
+        yesBtn.classList.add('active');
+        noBtn.classList.remove('active');
+        yesPanel.style.display = 'block';
+        noPanel.style.display = 'none';
+      } else {
+        noBtn.classList.add('active');
+        yesBtn.classList.remove('active');
+        noPanel.style.display = 'block';
+        yesPanel.style.display = 'none';
+      }
+    };
+
+    window.uploadStationImage = function(event, imgElementId) {
+      var file = event.target.files && event.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var imgEl = document.getElementById(imgElementId);
+        if (imgEl) {
+          imgEl.src = e.target.result;
+          window.showToast('📷 Đã cập nhật hình ảnh minh họa của bạn thành công!');
+        }
+      };
+      reader.readAsDataURL(file);
+    };
+
+    window.bloomLotus528 = function() {
+      window.playChimeNote(528, 0.8);
+      var status = document.getElementById('lotus-status');
+      if (status) {
+        status.textContent = '🌸 Đang lan tỏa tần số 528Hz!';
+      }
+      window.launchConfetti(35);
+      window.showToast('🌸 Khai mở năng lượng bình an & trí tuệ 528Hz!');
+    };
+
+    /* ==========================================================================
+       TRẠM 2: HIỂN THỊ CHI TIẾT 3 CON ĐƯỜNG TẠO KỸ NĂNG
+       ========================================================================== */
+    window.selectCreationMethod = function(id) {
+      for (var i = 1; i <= 3; i++) {
+        var btn = document.getElementById('method-btn-' + i);
+        if (btn) btn.classList.toggle('active', i === id);
+      }
+      var data = CREATION_METHODS_DATA[id];
+      var container = document.getElementById('method-detail-card');
+      if (!container || !data) return;
+
+      var stepsHtml = data.steps.map(function(s) {
+        return '<li><span>✅</span><div>' + s + '</div></li>';
+      }).join('');
+
+      container.innerHTML =
+        '<span class="card-badge badge-red">' + data.badge + '</span>' +
+        '<h3 class="card-title">' + data.title + '</h3>' +
+        '<p style="color:var(--text-sub);font-weight:600;margin-bottom:14px;">' + data.desc + '</p>' +
+        '<ul class="key-list" style="margin-bottom:16px;">' + stepsHtml + '</ul>' +
+        '<div style="padding:13px 16px;border-radius:12px;background:var(--emerald-soft);color:var(--emerald);font-weight:800;">' +
+        '🎯 Giá trị cốt lõi: ' + data.why +
+        '</div>';
+    };
+
+    /* ==========================================================================
+       TRẠM 3: CHỌN MÔ HÌNH & MỨC ĐỘ TƯ DUY
+       ========================================================================== */
+    window.selectModelScenario = function(id) {
+      for (var i = 1; i <= 3; i++) {
+        var btn = document.getElementById('sim-task-' + i);
+        if (btn) btn.classList.toggle('active', i === id);
+      }
+      var item = MODEL_SCENARIOS_DATA[id];
+      var box = document.getElementById('model-recommendation-box');
+      if (!box || !item) return;
+
+      box.innerHTML =
+        '<div style="font-size:1.25rem;font-weight:900;color:' + item.color + ';margin-bottom:6px;">🏆 ' + item.model + '</div>' +
+        '<div style="font-size:1.1rem;font-weight:800;color:var(--text-main);margin-bottom:10px;">⚡ ' + item.thinking + '</div>' +
+        '<p style="font-size:0.98rem;color:var(--text-sub);font-weight:600;"><strong>Lý do chọn:</strong> ' + item.reason + '</p>';
+    };
+
+    /* ==========================================================================
+       TRẠM 4: MÔ PHỎNG BÁNH XE CUỘC ĐỜI & TRI THỨC AI (CANVAS 60FPS)
+       ========================================================================== */
+    window.setWheelPreset = function(preset) {
+      var values = [85, 85, 85, 85, 85, 85];
+      if (preset === 'loco') {
+        values = [25, 20, 95, 35, 30, 40];
+        window.showToast('⚠️ Đang mô phỏng: AI rất cao (95%) nhưng thiếu Kiến thức & Cảm xúc!');
+      } else if (preset === 'small_round') {
+        values = [55, 55, 55, 55, 55, 55];
+        window.showToast('🟢 Đang mô phỏng: Bánh xe nhỏ nhưng tròn đều 55% – Lăn êm ái!');
+      } else {
+        values = [95, 95, 95, 95, 95, 95];
+        window.launchConfetti(40);
+        window.showToast('🌟 Đang mô phỏng: Bánh xe viên mãn tròn đầy 95%!');
+      }
+      for (var i = 0; i < 6; i++) {
+        var sl = document.getElementById('sl-w' + i);
+        if (sl) sl.value = values[i];
+      }
+      window.updateWheelSimulation();
+    };
+
+    window.updateWheelSimulation = function() {
+      var vals = [];
+      for (var i = 0; i < 6; i++) {
+        var sl = document.getElementById('sl-w' + i);
+        var v = sl ? parseInt(sl.value, 10) : 80;
+        vals.push(v);
+        var lbl = document.getElementById('lbl-w' + i);
+        if (lbl) lbl.textContent = v + '%';
+      }
+
+      var maxV = Math.max.apply(null, vals);
+      var minV = Math.min.apply(null, vals);
+      var spread = maxV - minV;
+      var avg = vals.reduce(function(a, b) { return a + b; }, 0) / 6;
+
+      var banner = document.getElementById('wheel-verdict-banner');
+      if (!banner) return;
+
+      if (spread > 35) {
+        banner.style.background = 'var(--primary-soft)';
+        banner.style.color = 'var(--primary)';
+        if (vals[2] > vals[1] + 30) {
+          banner.textContent = '🚨 BÁNH XE LỘ CỘ, XÓC NẢY! Dùng AI cao nhưng thiếu Kiến thức chuyên môn thì AI làm sai cũng không biết!';
+        } else {
+          banner.textContent = '⚠️ BÁNH XE LỆCH TRỤC (Chênh lệch ' + spread + '%): Phát triển không đồng đều khiến xe đi giật cục!';
+        }
+      } else if (avg >= 80) {
+        banner.style.background = 'var(--emerald-soft)';
+        banner.style.color = 'var(--emerald)';
+        banner.textContent = '🌟 TUYỆT MỸ VIÊN MÃN! Cảm xúc + Tri thức + Kỹ năng AI tròn đầy giúp bánh xe lăn êm ru thần tốc!';
+      } else {
+        banner.style.background = 'var(--cyan-soft)';
+        banner.style.color = 'var(--cyan)';
+        banner.textContent = '🟢 BÁNH XE TRÒN ĐỀU (' + Math.round(avg) + '%): Dù bán kính vừa phải nhưng cân đối nên lăn rất êm đềm!';
+      }
+    };
+
+    window.renderLifeWheelLoop = function() {
+      var canvas = document.getElementById('lifeWheelCanvas');
+      if (canvas) {
+        var ctx = canvas.getContext('2d');
+        var cw = canvas.width;
+        var ch = canvas.height;
+        var vals = [];
+        for (var i = 0; i < 6; i++) {
+          var sl = document.getElementById('sl-w' + i);
+          vals.push(sl ? parseInt(sl.value, 10) : 80);
+        }
+
+        var maxV = Math.max.apply(null, vals);
+        var minV = Math.min.apply(null, vals);
+        var spread = maxV - minV;
+        var avg = vals.reduce(function(a, b) { return a + b; }, 0) / 6;
+        var isBumpy = spread > 35;
+
+        ctx.clearRect(0, 0, cw, ch);
+
+        // Vẽ mặt đường chuyển động
+        var groundY = ch - 52;
+        ctx.fillStyle = '#1e293b';
+        ctx.fillRect(0, groundY, cw, 52);
+
+        var speed = isBumpy ? 2.2 : (avg / 18);
+        roadScrollOffset = (roadScrollOffset + speed) % 80;
+        ctx.fillStyle = '#fbbf24';
+        for (var x = -80; x < cw + 80; x += 80) {
+          ctx.fillRect(x - roadScrollOffset, groundY + 22, 42, 6);
+        }
+
+        // Tính độ nảy lộ cộ nếu bánh xe méo
+        var bounceY = isBumpy ? Math.abs(Math.sin(wheelAnimAngle * 3)) * (spread * 0.35) : 0;
+        var baseRadius = 35 + (avg / 100) * 78;
+        var cx = cw / 2;
+        var cy = groundY - baseRadius - bounceY;
+
+        ctx.save();
+        ctx.translate(cx, cy);
+        wheelAnimAngle += speed * 0.025;
+        ctx.rotate(wheelAnimAngle);
+
+        var spokeColors = ['#f43f5e', '#6366f1', '#10b981', '#f59e0b', '#06b6d4', '#a855f7'];
+        var spokeLabels = ['Cảm Xúc', 'Kiến Thức', 'Kỹ Năng AI', 'Sức Khỏe', 'Quan Hệ', 'Tài Chính'];
+
+        // Vẽ đa giác / đường tròn nối 6 đỉnh
+        ctx.beginPath();
+        for (var s = 0; s < 6; s++) {
+          var r = 35 + (vals[s] / 100) * 78;
+          var ang = (s * Math.PI * 2) / 6;
+          var px = r * Math.cos(ang);
+          var py = r * Math.sin(ang);
+          if (s === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.closePath();
+
+        if (!isBumpy) {
+          // Vẽ vành bánh xe tròn đều rực rỡ
+          ctx.beginPath();
+          ctx.arc(0, 0, baseRadius, 0, Math.PI * 2);
+          ctx.strokeStyle = avg >= 80 ? '#fbbf24' : '#38bdf8';
+          ctx.lineWidth = 8;
+          ctx.shadowColor = avg >= 80 ? '#fbbf24' : '#38bdf8';
+          ctx.shadowBlur = 18;
+          ctx.stroke();
+          ctx.shadowBlur = 0;
+        } else {
+          ctx.strokeStyle = '#ef4444';
+          ctx.lineWidth = 6;
+          ctx.stroke();
+        }
+
+        // Vẽ 6 nan hoa đa sắc
+        for (var k = 0; k < 6; k++) {
+          var rk = 35 + (vals[k] / 100) * 78;
+          var ak = (k * Math.PI * 2) / 6;
+          var tx = rk * Math.cos(ak);
+          var ty = rk * Math.sin(ak);
+
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.lineTo(tx, ty);
+          ctx.strokeStyle = spokeColors[k];
+          ctx.lineWidth = 4;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(tx, ty, 7, 0, Math.PI * 2);
+          ctx.fillStyle = spokeColors[k];
+          ctx.fill();
+
+          ctx.save();
+          ctx.translate(tx * 0.72, ty * 0.72);
+          ctx.fillStyle = '#ffffff';
+          ctx.font = 'bold 11px sans-serif';
+          ctx.fillText(spokeLabels[k], -22, -6);
+          ctx.restore();
+        }
+
+        // Trục giữa: CHÍNH MÌNH
+        ctx.beginPath();
+        ctx.arc(0, 0, 20, 0, Math.PI * 2);
+        ctx.fillStyle = '#dc2626';
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#ffffff';
+        ctx.stroke();
+
+        ctx.restore();
+      }
+
+      // Vẽ vòng tròn hơi thở 5s-5s ở Trạm 7
+      var bCanvas = document.getElementById('breathCanvas');
+      if (bCanvas) {
+        var bCtx = bCanvas.getContext('2d');
+        breathPhaseAngle += 0.02;
+        var sine = (Math.sin(breathPhaseAngle) + 1) / 2; // 0 -> 1
+        var bRadius = 48 + sine * 55;
+
+        bCtx.clearRect(0, 0, 240, 240);
+        bCtx.beginPath();
+        bCtx.arc(120, 120, bRadius, 0, Math.PI * 2);
+        bCtx.fillStyle = 'rgba(16, 185, 129, 0.22)';
+        bCtx.fill();
+        bCtx.lineWidth = 5;
+        bCtx.strokeStyle = '#059669';
+        bCtx.stroke();
+
+        var bText = document.getElementById('breath-text');
+        if (bText) {
+          bText.textContent = Math.cos(breathPhaseAngle) >= 0 ? 'Hít vào 5s...' : 'Thở ra 5s...';
+        }
+      }
+
+      requestAnimationFrame(window.renderLifeWheelLoop);
+    };
+
+    /* ==========================================================================
+       TRẠM 5: HIỂN THỊ 4 BƯỚC VÀNG TẠO KỸ NĂNG
+       ========================================================================== */
+    window.selectStepGuide = function(stepNum) {
+      for (var i = 1; i <= 4; i++) {
+        var tab = document.getElementById('step-tab-' + i);
+        if (tab) tab.classList.toggle('active', i === stepNum);
+      }
+      var data = STEP_GUIDES_DATA[stepNum];
+      var leftBox = document.getElementById('step-guide-content');
+      var rightBox = document.getElementById('step-comparison-box');
+      if (!data || !leftBox || !rightBox) return;
+
+      var listHtml = data.bullets.map(function(b) {
+        return '<li><span>💎</span><div>' + b + '</div></li>';
+      }).join('');
+
+      leftBox.innerHTML =
+        '<span class="card-badge badge-indigo">' + data.badge + '</span>' +
+        '<h3 class="card-title">' + data.title + '</h3>' +
+        '<ul class="key-list" style="margin-top:14px;">' + listHtml + '</ul>';
+
+      rightBox.innerHTML =
+        '<div style="padding:14px;border-radius:12px;background:var(--primary-soft);color:var(--primary);font-weight:700;margin-bottom:10px;">' +
+        data.wrong +
+        '</div>' +
+        '<div style="padding:14px;border-radius:12px;background:var(--emerald-soft);color:var(--emerald);font-weight:700;">' +
+        data.right +
+        '</div>';
+    };
+
+    /* ==========================================================================
+       TRẠM 6: BÀN LÀM VIỆC GIẢ LẬP GEMINI & XUẤT FILE SKILL.md
+       ========================================================================== */
+    window.loadSkillTemplate = function(tplKey) {
+      var tpl = SKILL_TEMPLATES_DB[tplKey];
+      if (!tpl) return;
+      document.getElementById('sim-name').value = tpl.name;
+      document.getElementById('sim-desc').value = tpl.desc;
+      document.getElementById('sim-inst').value = tpl.inst;
+      window.validateSkillSimulator();
+      window.showToast('✨ Đã nạp mẫu Kỹ năng vào Bàn giả lập!');
+    };
+
+    window.validateSkillSimulator = function() {
+      var nameVal = document.getElementById('sim-name').value.trim();
+      var descVal = document.getElementById('sim-desc').value.trim();
+      var instVal = document.getElementById('sim-inst').value.trim();
+
+      var fbName = document.getElementById('fb-name');
+      var fbDesc = document.getElementById('fb-desc');
+      var fbInst = document.getElementById('fb-inst');
+      var scoreBadge = document.getElementById('skill-score-badge');
+
+      var score = 0;
+
+      // Kiểm tra Name
+      var hasSpace = /\s/.test(nameVal);
+      var hasUpper = /[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]/.test(nameVal);
+      if (!nameVal) {
+        fbName.style.color = 'var(--amber)';
+        fbName.textContent = '⚠️ Hãy nhập tên kỹ năng (VD: soan-giao-an).';
+      } else if (hasSpace || hasUpper) {
+        fbName.style.color = 'var(--primary)';
+        fbName.textContent = '❌ LỖI: Tên kỹ năng không được viết hoa, không dấu và không chứa dấu cách! Hãy dùng dấu gạch ngang (-).';
+      } else {
+        fbName.style.color = 'var(--emerald)';
+        fbName.textContent = '✅ Tên kỹ năng đúng chuẩn quốc tế (+30 điểm)!';
+        score += 30;
+      }
+
+      // Kiểm tra Description
+      if (descVal.length < 25) {
+        fbDesc.style.color = 'var(--primary)';
+        fbDesc.textContent = '❌ Mô tả còn ngắn (' + descVal.length + ' ký tự). Hãy ghi rõ công dụng và khi nào kích hoạt!';
+      } else {
+        fbDesc.style.color = 'var(--emerald)';
+        fbDesc.textContent = '✅ Mô tả kích hoạt đầy đủ, rõ ràng (+35 điểm)!';
+        score += 35;
+      }
+
+      // Kiểm tra Instructions
+      if (instVal.length < 40) {
+        fbInst.style.color = 'var(--primary)';
+        fbInst.textContent = '❌ Hướng dẫn quá ngắn. Hãy nêu rõ Vai trò, Quy trình và Quy tắc bắt buộc!';
+      } else {
+        fbInst.style.color = 'var(--emerald)';
+        fbInst.textContent = '✅ Cấu trúc hướng dẫn chi tiết rất chặt chẽ (+35 điểm)!';
+        score += 35;
+      }
+
+      if (scoreBadge) {
+        scoreBadge.textContent = score + ' / 100';
+      }
+    };
+
+    window.buildSkillMarkdownString = function() {
+      var nameVal = document.getElementById('sim-name').value.trim() || 'ky-nang-ai-moi';
+      var descVal = document.getElementById('sim-desc').value.trim();
+      var instVal = document.getElementById('sim-inst').value.trim();
+      return '---\nname: ' + nameVal + '\ndescription: ' + descVal + '\n---\n\n' + instVal + '\n';
+    };
+
+    window.copySimulatedSkill = function() {
+      var fullText = window.buildSkillMarkdownString();
+      var tempArea = document.createElement('textarea');
+      tempArea.value = fullText;
+      document.body.appendChild(tempArea);
+      tempArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempArea);
+      window.showToast('📋 Đã sao chép toàn bộ Kỹ năng! Bạn có thể dán ngay vào Gemini.');
+    };
+
+    window.downloadSkillMarkdown = function() {
+      var nameVal = document.getElementById('sim-name').value.trim() || 'SKILL';
+      var content = window.buildSkillMarkdownString();
+      var blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = nameVal + '_SKILL.md';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      window.launchConfetti(35);
+      window.showToast('📥 Đã tải về file ' + nameVal + '_SKILL.md thành công!');
+    };
+
+    /* ==========================================================================
+       GIỌNG ĐỌC TIẾNG VIỆT CHUẨN (CHỐNG ĐỌC TIẾNG ANH XÌ XÀ XÌ XỒ)
+       ========================================================================== */
+    window.loadVietnameseVoice = function() {
+      if (!('speechSynthesis' in window)) return;
+      var voices = window.speechSynthesis.getVoices();
+      for (var i = 0; i < voices.length; i++) {
+        var lang = (voices[i].lang || '').toLowerCase();
+        var vname = (voices[i].name || '').toLowerCase();
+        if (lang.indexOf('vi') !== -1 || vname.indexOf('viet') !== -1 || vname.indexOf('hoaimy') !== -1 || vname.indexOf('an ') !== -1) {
+          vnVoiceInstance = voices[i];
+          break;
+        }
+      }
+    };
+
+    if ('speechSynthesis' in window) {
+      window.loadVietnameseVoice();
+      if (window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = window.loadVietnameseVoice;
+      }
+    }
+
+    window.toggleVietnameseVoice = function() {
+      if (!('speechSynthesis' in window)) {
+        window.showToast('⚠️ Trình duyệt của bạn không hỗ trợ bộ đọc giọng nói.');
+        return;
+      }
+      var btn = document.getElementById('btn-tts');
+      var lbl = document.getElementById('tts-label');
+
+      if (isSpeakingTTS) {
+        window.speechSynthesis.cancel();
+        isSpeakingTTS = false;
+        btn.classList.remove('speaking');
+        lbl.textContent = 'Đọc Bài Giảng';
+        window.showToast('⏹️ Đã dừng đọc bài giảng.');
+      } else {
+        window.loadVietnameseVoice();
+        if (!vnVoiceInstance) {
+          window.showToast('💡 Hãy bật gói Giọng đọc Tiếng Việt (Vietnamese) trong Cài đặt Windows/Edge để nghe giọng chuẩn nhất!');
+          return;
+        }
+        isSpeakingTTS = true;
+        btn.classList.add('speaking');
+        lbl.textContent = 'Đang Đọc...';
+        window.speakActiveStation();
+      }
+    };
+
+    window.speakActiveStation = function() {
+      if (!isSpeakingTTS || !vnVoiceInstance) return;
+      window.speechSynthesis.cancel();
+      var activeSection = document.getElementById('station-' + currentStationIndex);
+      if (!activeSection) return;
+      var speechText = activeSection.getAttribute('data-speech') || activeSection.innerText;
+
+      var utter = new SpeechSynthesisUtterance(speechText);
+      utter.voice = vnVoiceInstance;
+      utter.lang = 'vi-VN';
+      utter.rate = 0.95;
+      utter.onend = function() {
+        isSpeakingTTS = false;
+        var btn = document.getElementById('btn-tts');
+        var lbl = document.getElementById('tts-label');
+        if (btn) btn.classList.remove('speaking');
+        if (lbl) lbl.textContent = 'Đọc Bài Giảng';
+      };
+      window.speechSynthesis.speak(utter);
+    };
+
+    /* ==========================================================================
+       ÂM THANH CHỮA LÀNH 528HZ (WEB AUDIO API)
+       ========================================================================== */
+    window.playChimeNote = function(freq, duration) {
+      try {
+        if (!audioCtx) {
+          var AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AudioContextClass();
+        }
+        var osc = audioCtx.createOscillator();
+        var gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    };
+
+    window.toggleHealingAudio = function() {
+      var btn = document.getElementById('btn-528');
+      try {
+        if (!audioCtx) {
+          var AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AudioContextClass();
+        }
+        if (isPlaying528) {
+          if (healingOsc) {
+            healingOsc.stop();
+            healingOsc.disconnect();
+            healingOsc = null;
+          }
+          isPlaying528 = false;
+          if (btn) btn.classList.remove('active');
+          window.showToast('🔇 Đã tắt âm thanh nền 528Hz.');
+        } else {
+          healingOsc = audioCtx.createOscillator();
+          healingGain = audioCtx.createGain();
+          healingOsc.type = 'sine';
+          healingOsc.frequency.setValueAtTime(528, audioCtx.currentTime);
+          healingGain.gain.setValueAtTime(0.035, audioCtx.currentTime);
+          healingOsc.connect(healingGain);
+          healingGain.connect(audioCtx.destination);
+          healingOsc.start();
+          isPlaying528 = true;
+          if (btn) btn.classList.add('active');
+          window.showToast('🎵 Đang phát sóng âm thanh tần số 528Hz êm dịu...');
+        }
+      } catch (e) {}
+    };
+
+    /* ==========================================================================
+       TRẠM 7 & 8: YOUTUBE EMBED, QUIZ PHÁO HOA & BẢNG KÝ TÊN CAM KẾT
+       ========================================================================== */
+    window.updateYoutubeEmbed = function() {
+      var urlInput = document.getElementById('yt-url-input');
+      var iframe = document.getElementById('yt-iframe');
+      if (!urlInput || !iframe) return;
+      var raw = urlInput.value.trim();
+      var videoId = 'jfKfPfyJRdk';
+      var match = raw.match(/(?:v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11})/);
+      if (match && match[1]) {
+        videoId = match[1];
+      }
+      iframe.src = 'https://www.youtube.com/embed/' + videoId;
+      window.showToast('🎬 Đã cập nhật video bài giảng thành công!');
+    };
+
+    window.answerQuiz = function(qNum, isCorrect, btnEl) {
+      if (isCorrect) {
+        btnEl.style.background = 'var(--emerald)';
+        btnEl.style.color = '#ffffff';
+        btnEl.style.borderColor = 'var(--emerald)';
+        window.playChimeNote(660, 0.5);
+        window.launchConfetti(55);
+        window.showToast('🎉 Chính xác 100%! Chúc mừng bạn đã nắm vững kiến thức Câu ' + qNum + '!');
+      } else {
+        btnEl.style.background = 'var(--primary)';
+        btnEl.style.color = '#ffffff';
+        btnEl.style.borderColor = 'var(--primary)';
+        window.playChimeNote(220, 0.3);
+        window.showToast('💡 Chưa chính xác, hãy chọn lại đáp án khác nhé!');
+      }
+    };
+
+    window.launchConfetti = function(count) {
+      var cCanvas = document.getElementById('confetti-canvas');
+      if (!cCanvas) return;
+      cCanvas.width = window.innerWidth;
+      cCanvas.height = window.innerHeight;
+      var colors = ['#dc2626', '#fbbf24', '#10b981', '#3b82f6', '#a855f7', '#ec4899'];
+      for (var i = 0; i < count; i++) {
+        confettiParticles.push({
+          x: window.innerWidth / 2,
+          y: window.innerHeight / 2,
+          vx: (Math.random() - 0.5) * 16,
+          vy: (Math.random() - 0.8) * 16,
+          size: Math.random() * 8 + 5,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          life: 80
+        });
+      }
+    };
+
+    window.renderConfettiLoop = function() {
+      var cCanvas = document.getElementById('confetti-canvas');
+      if (cCanvas && confettiParticles.length > 0) {
+        var ctx = cCanvas.getContext('2d');
+        ctx.clearRect(0, 0, cCanvas.width, cCanvas.height);
+        for (var i = confettiParticles.length - 1; i >= 0; i--) {
+          var p = confettiParticles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.35;
+          p.life--;
+          ctx.fillStyle = p.color;
+          ctx.fillRect(p.x, p.y, p.size, p.size);
+          if (p.life <= 0) confettiParticles.splice(i, 1);
+        }
+      }
+      requestAnimationFrame(window.renderConfettiLoop);
+    };
+
+    window.initSignaturePad = function() {
+      var sigCanvas = document.getElementById('sigCanvas');
+      if (!sigCanvas) return;
+      var ctx = sigCanvas.getContext('2d');
+      ctx.strokeStyle = '#1e3a8a';
+      ctx.lineWidth = 3;
+      ctx.lineCap = 'round';
+
+      var getPos = function(e) {
+        var rect = sigCanvas.getBoundingClientRect();
+        var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return {
+          x: (clientX - rect.left) * (sigCanvas.width / rect.width),
+          y: (clientY - rect.top) * (sigCanvas.height / rect.height)
+        };
+      };
+
+      sigCanvas.addEventListener('mousedown', function(e) {
+        isDrawingSig = true;
+        var pos = getPos(e);
+        sigLastX = pos.x;
+        sigLastY = pos.y;
+      });
+      sigCanvas.addEventListener('mousemove', function(e) {
+        if (!isDrawingSig) return;
+        var pos = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(sigLastX, sigLastY);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        sigLastX = pos.x;
+        sigLastY = pos.y;
+      });
+      window.addEventListener('mouseup', function() { isDrawingSig = false; });
+
+      sigCanvas.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        isDrawingSig = true;
+        var pos = getPos(e);
+        sigLastX = pos.x;
+        sigLastY = pos.y;
+      }, { passive: false });
+      sigCanvas.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        if (!isDrawingSig) return;
+        var pos = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(sigLastX, sigLastY);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        sigLastX = pos.x;
+        sigLastY = pos.y;
+      }, { passive: false });
+      sigCanvas.addEventListener('touchend', function() { isDrawingSig = false; });
+    };
+
+    window.clearSignature = function() {
+      var sigCanvas = document.getElementById('sigCanvas');
+      if (!sigCanvas) return;
+      var ctx = sigCanvas.getContext('2d');
+      ctx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
+      window.showToast('🗑️ Đã xóa bảng ký tên.');
+    };
+
+    window.celebrateCommitment = function() {
+      window.playChimeNote(528, 0.9);
+      window.launchConfetti(80);
+      window.showToast('🌟 Chúc mừng bạn đã cam kết làm chủ Kỹ năng AI!');
+    };
+
+    /* ==========================================================================
+       MODAL CẤU HÌNH LINK & XUẤT FILE HTML V01
+       ========================================================================== */
+    window.openConfigModal = function() {
+      document.getElementById('config-modal').classList.add('open');
+    };
+
+    window.closeConfigModal = function() {
+      document.getElementById('config-modal').classList.remove('open');
+    };
+
+    window.saveConfigLinks = function() {
+      var yt = document.getElementById('cfg-yt').value.trim();
+      var zalo = document.getElementById('cfg-zalo').value.trim();
+      var fb = document.getElementById('cfg-fb').value.trim();
+
+      if (yt) {
+        document.getElementById('yt-url-input').value = yt;
+        document.getElementById('link-yt-btn').href = yt;
+        window.updateYoutubeEmbed();
+      }
+      if (zalo) document.getElementById('link-zalo-btn').href = zalo;
+      if (fb) document.getElementById('link-fb-btn').href = fb;
+
+      window.closeConfigModal();
+      window.showToast('✅ Đã lưu toàn bộ đường dẫn kết nối!');
+    };
+
+    window.exportStandaloneHTML = function() {
+      var htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      var blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = '1110_Lam_Chu_Ky_Nang_AI_V01.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      window.showToast('💾 Đã tải xuống file 1110_Lam_Chu_Ky_Nang_AI_V01.html!');
+    };
+
+    /* PHÍM TẮT MŨI TÊN CHUYỂN TRẠM */
+    window.addEventListener('keydown', function(e) {
+      var tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+      if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+      if (e.key === 'ArrowRight') window.stepStation(1);
+      if (e.key === 'ArrowLeft') window.stepStation(-1);
+    });
+
+    /* KHỞI ĐỘNG HỆ THỐNG KHI TẢI TRANG */
+    window.addEventListener('DOMContentLoaded', function() {
+      window.selectCreationMethod(1);
+      window.selectModelScenario(1);
+      window.selectStepGuide(1);
+      window.updateWheelSimulation();
+      window.validateSkillSimulator();
+      window.initSignaturePad();
+      window.renderLifeWheelLoop();
+      window.renderConfettiLoop();
+    });
+  </script>
+</body>
+</html>
